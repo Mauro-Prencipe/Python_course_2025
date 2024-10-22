@@ -1,4 +1,4 @@
-# Python_course_2024
+# Python_course_2025
 
 Python codes and associated notebooks for the PhD course on Python programming (2024)
 
