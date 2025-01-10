@@ -20,9 +20,5 @@ Notebooks should be followed in the order given below
 
 
 The data_files folder contains data read or written by the codes in the notebooks.
-The L7_data_files folder is required for the L7_classes_advanced notebook.
 
 The Python files plot.py and einstein_fit.py are required by the General_fit notebook serie
-
-The File requirements.txt contains all the libraries to be installed by the command
-pip install -r requirements.txt
