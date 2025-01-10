@@ -21,4 +21,9 @@ Notebooks should be followed in the order given below
 
 The data_files folder contains data read or written by the codes in the notebooks.
 
+The L7_data_files folder contains data for the L7 lecture; L7_lib is a library for the
+same lecture.
+
 The Python files plot.py and einstein_fit.py are required by the General_fit notebook serie
+
+The exercises folder contains simple Python programs used as exercises during the course.
