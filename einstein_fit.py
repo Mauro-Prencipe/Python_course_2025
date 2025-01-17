@@ -20,7 +20,7 @@ class einstein_class():
         f3=((eps2/tt)**2)*np.exp(eps2/tt)/((np.exp(eps2/tt)-1)**2)
         return f1*(f2+f3)
     
-class data_class():
+class Data():
     def __init__(self, name, filename, apfu):
         self.name=name
         self.filename=filename
