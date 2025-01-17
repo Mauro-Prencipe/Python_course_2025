@@ -7604,7 +7604,7 @@ Name of object 2:  x2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Indeed, we created 2 objects (<em>x1</em> and <em>x2</em>) and such number 2 is correctly recorded in the <em>Data.number_of_obj</em> attribute of the class. However this way to proceed is *<strong>not</strong> advised<em>. In particular, note that the name of the class (</em>Data<em>) is </em>hardcoded* in the definition of the __init__ function... If, for some reason, at a later time one decides to change the name of the class, every instance of such name within the body of the class must also be changed.</p>
+<p>Indeed, we created 2 objects (<em>x1</em> and <em>x2</em>) and such number 2 is correctly recorded in the <em>Data.number_of_obj</em> attribute of the class. However this way to proceed is *<strong>not</strong>* <em>advised</em>. In particular, note that the name of the class (<em>Data</em>) is <em>hardcoded</em> in the definition of the __init__ function... If, for some reason, at a later time one decides to change the name of the class, every instance of such name within the body of the class must also be changed.</p>
 <p>Note that, since the class attributes are also inherited by the objects, the <em>number_of_obj</em> variable can be accessed, used and modified by the instances of the classes: indeed in the __init__ constructor we could write</p>
 <p><code>self.number_of_obj += 1</code></p>
 <p>instead of</p>
@@ -8000,7 +8000,7 @@ List of object names ['x1', 'x2', 'x3', 'x1_x2', 'x1_x2_x3']
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>In general, the objects (instances) of the <em>Data</em> class carry data (not just a name). In the following implementation of the code we added an attribute (<em>data</em>) to store such data (a list of numbers in the example), and, whenever we <em>add</em> two objects, their associated lists are merged in a new list which is then assigned to the newly created object:</p>
+<p>In general, the objects (instances) of the <em>Data</em> class carry data (not just a name). In the following implementation of the code we added an attribute (<em>data</em>) to store such data (a list of numbers in the example) and, whenever we <em>add</em> two objects, their associated lists are merged in a new list which is then assigned to the newly created object:</p>
 </div>
 </div>
 </div>
