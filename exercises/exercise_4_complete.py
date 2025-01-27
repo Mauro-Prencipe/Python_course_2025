@@ -31,7 +31,8 @@ class Mini():
     @classmethod
     def set_expand(cls, value):
         if value < 1.1:
-           print("*** WARNING *** Expansion factor cannot be les than 1.1")
+           print("*** WARNING *** Expansion factor cannot be less than 1.1")
+           print("                expand has been set to 1.1 ")
            cls._expand=1.1
         else:              
            cls._expand=value
