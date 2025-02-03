@@ -12,7 +12,6 @@ class Mini():
     d_ini=2.
     delta=d_ini/npoint
     fun_call=0
-    expand=1.2
     minimum_x=None
     minimum_y=None
     
@@ -57,23 +56,7 @@ class Mini():
                    (default: 10)
         '''
         cls.npoint=point
-    
-    @classmethod
-    def set_expand(cls, value):
-        '''
-        Sets a factor for the expansion of the sampling interval of the 
-        function
-        
-        Args:
-            value: expansion factor (default: 1.1)
-        '''
-        if value < 1.1:
-           print("*** WARNING *** Expansion factor cannot be less than 1.1")
-           print("                expand has been set to 1.1")
-           cls.expand=1.1
-        else:              
-           cls.expand=value
-        
+            
     
     @classmethod
     def findmin(cls, fun, xa, out=False):
@@ -93,10 +76,28 @@ class Mini():
             and minimum_y attributes of the class
         '''
         
+        def min_rec():
+            nonlocal iteration
+   
+            x_list=np.linspace(xa-cls.delta, xa+cls.delta, cls.npoint)
+
+            cls.delta=abs(x_list[1]-x_list[0])
+           
+            y_list=fun(x_list)
+           
+            cls.fun_call=cls.fun_call+cls.npoint
+           
+            y_min_pos=np.argmin(y_list)
+            x_min_approx=x_list[y_min_pos]
+       
+            iteration += 1
+       
+            return x_min_approx        
+        
         cls.reset()     
         iteration=1        
         x_list=np.linspace(xa-cls.d_ini/2., xa+cls.d_ini/2., cls.npoint)        
-        cls.delta=2.*abs(x_list[1]-x_list[0])
+        cls.delta=abs(x_list[1]-x_list[0])
         
         y_list=fun(x_list)
         
@@ -107,30 +108,10 @@ class Mini():
         diff=abs(x_min_approx - xa)
         
         if cls.delta < diff:
-           cls.delta=cls.expand*diff
+           cls.delta=diff
         
         print("\n")
         cls.describe(iteration, cls.d_ini, diff, x_min_approx)
-    
-    
-        def min_rec():
-            nonlocal iteration
-    
-            x_list=np.linspace(xa-cls.delta, xa+cls.delta, cls.npoint)
-            Delta=abs(x_list[1]-x_list[0])                    
-            cls.delta=cls.expand*Delta
-            
-            y_list=fun(x_list)
-            
-            
-            cls.fun_call=cls.fun_call+cls.npoint
-            
-            y_min_pos=np.argmin(y_list)
-            x_min_approx=x_list[y_min_pos]
-        
-            iteration += 1
-        
-            return x_min_approx
        
         
         while (iteration < 10) or (diff > cls.thr and cls.delta > cls.thr and iteration < cls.maxiter):
@@ -140,6 +121,7 @@ class Mini():
               diff=abs(x_min_approx - xa)
               
               xa=x_min_approx
+              
               cls.describe(iteration, cls.delta, diff, x_min_approx)
                   
 
