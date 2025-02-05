@@ -10,7 +10,6 @@ class Mini():
     npoint=10
     maxiter=100
     d_ini=2.
-    delta=d_ini/npoint
     fun_call=0
     minimum_x=None
     minimum_y=None
@@ -77,11 +76,11 @@ class Mini():
         '''
         
         def min_rec():
-            nonlocal iteration
+            nonlocal iteration, delta
    
-            x_list=np.linspace(xa-cls.delta, xa+cls.delta, cls.npoint)
+            x_list=np.linspace(xa-delta, xa+delta, cls.npoint)
 
-            cls.delta=abs(x_list[1]-x_list[0])
+            delta=abs(x_list[1]-x_list[0])
            
             y_list=fun(x_list)
            
@@ -92,12 +91,16 @@ class Mini():
        
             iteration += 1
        
-            return x_min_approx        
+            return x_min_approx 
+        
+        def describe(it, rng, diff, x_apx):   
+            print("Iteration: %3i; range: %8.4e;  x_diff: %8.4e; x_min_approx: %10.8e" %\
+                 (it, rng, diff, x_apx))
         
         cls.reset()     
         iteration=1        
         x_list=np.linspace(xa-cls.d_ini/2., xa+cls.d_ini/2., cls.npoint)        
-        cls.delta=abs(x_list[1]-x_list[0])
+        delta=abs(x_list[1]-x_list[0])
         
         y_list=fun(x_list)
         
@@ -107,23 +110,20 @@ class Mini():
         x_min_approx=x_list[y_min_pos]
         diff=abs(x_min_approx - xa)
         
-        if cls.delta < diff:
-           cls.delta=diff
+        if delta < diff:
+           delta=diff
         
         print("\n")
-        cls.describe(iteration, cls.d_ini, diff, x_min_approx)
+        describe(iteration, cls.d_ini, diff, x_min_approx)
        
         
-        while (iteration < 10) or (diff > cls.thr and cls.delta > cls.thr and iteration < cls.maxiter):
+        while (iteration < 3) or (diff > cls.thr and delta > cls.thr and iteration < cls.maxiter):
             
               x_min_approx=min_rec()
-
-              diff=abs(x_min_approx - xa)
-              
+              diff=abs(x_min_approx - xa)              
               xa=x_min_approx
               
-              cls.describe(iteration, cls.delta, diff, x_min_approx)
-                  
+              describe(iteration, delta, diff, x_min_approx)                  
 
         y_min_approx=fun(x_min_approx)
         
@@ -144,13 +144,8 @@ class Mini():
     
     @classmethod
     def reset(cls):
-        cls.delta=cls.d_ini/cls.npoint
         cls.fun_call=0
         
-    @classmethod
-    def describe(cls, it, rng, diff, x_apx):   
-        print("Iteration: %3i; range: %8.4e;  x_diff: %8.4e; x_min_approx: %10.8e" %\
-             (it, rng, diff, x_apx))
 
     
 
