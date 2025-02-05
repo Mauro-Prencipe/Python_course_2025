@@ -8323,7 +8323,7 @@ factorial(n, prn=False)
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>7.67 μs ± 157 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<pre>7.56 μs ± 126 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre>
 </div>
 </div>
@@ -8350,7 +8350,7 @@ factorial(n, prn=False)
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>32.2 μs ± 1.77 μs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<pre>29.5 μs ± 1.49 μs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre>
 </div>
 </div>
@@ -8461,7 +8461,7 @@ factorial(n, prn=False)
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>155 ns ± 1.93 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<pre>155 ns ± 2.02 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre>
 </div>
 </div>
@@ -8499,7 +8499,7 @@ factorial(n, prn=False)
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>1.3 μs ± 115 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<pre>1.15 μs ± 13.5 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre>
 </div>
 </div>
@@ -8576,7 +8576,7 @@ factorial(n, prn=False)
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>199 ns ± 4.79 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<pre>189 ns ± 1.81 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre>
 </div>
 </div>
@@ -8589,7 +8589,7 @@ factorial(n, prn=False)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>So, our <em>numba</em> optimized <em>opt_factorial</em> function is even more efficient than the <em>C-compile math.factorial</em> function!</p>
+<p>So, our <em>numba</em> optimized <em>opt_factorial</em> function is even more efficient than the <em>C-compiled math.factorial</em> function!</p>
 <p>However...</p>
 </div>
 </div>
@@ -8999,7 +8999,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[39], line 1</span>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>as the last value (2) is seen as a further element of the <em>tuple</em> <em>val</em>, and no value for b is provided...</p>
+<p>as the last value (2) is seen as a further element of the <em>tuple</em> <em>val</em>, and no value for <em>b</em> is provided...</p>
 <p>Indeed, in the definition, <em>b</em> is seen as a <em>keyword</em> argument (for which no <em>default</em> value has been provided). In fact, the following call is perfectly <em>legal</em>:</p>
 </div>
 </div>
