@@ -7609,11 +7609,11 @@ Type of b: &lt;class 'float'&gt;
 class int(object)
  |  int([x]) -&gt; integer
  |  int(x, base=10) -&gt; integer
- |  
+ |
  |  Convert a number or string to an integer, or return 0 if no arguments
- |  are given.  If x is a number, return x.__int__().  For floating point
+ |  are given.  If x is a number, return x.__int__().  For floating-point
  |  numbers, this truncates towards zero.
- |  
+ |
  |  If x is not a number or if base is given, then x must be a string,
  |  bytes, or bytearray instance representing an integer literal in the
  |  given base.  The literal can be preceded by '+' or '-' and be surrounded
@@ -7621,200 +7621,202 @@ class int(object)
  |  Base 0 means to interpret the base from the string as an integer literal.
  |  &gt;&gt;&gt; int('0b100', base=0)
  |  4
- |  
+ |
  |  Built-in subclasses:
  |      bool
- |  
+ |
  |  Methods defined here:
- |  
+ |
  |  __abs__(self, /)
  |      abs(self)
- |  
+ |
  |  __add__(self, value, /)
  |      Return self+value.
- |  
+ |
  |  __and__(self, value, /)
  |      Return self&amp;value.
- |  
+ |
  |  __bool__(self, /)
  |      True if self else False
- |  
+ |
  |  __ceil__(...)
  |      Ceiling of an Integral returns itself.
- |  
+ |
  |  __divmod__(self, value, /)
  |      Return divmod(self, value).
- |  
+ |
  |  __eq__(self, value, /)
  |      Return self==value.
- |  
+ |
  |  __float__(self, /)
  |      float(self)
- |  
+ |
  |  __floor__(...)
  |      Flooring an Integral returns itself.
- |  
+ |
  |  __floordiv__(self, value, /)
  |      Return self//value.
- |  
+ |
  |  __format__(self, format_spec, /)
- |      Default object formatter.
- |  
+ |      Convert to a string according to format_spec.
+ |
  |  __ge__(self, value, /)
  |      Return self&gt;=value.
- |  
+ |
  |  __getattribute__(self, name, /)
  |      Return getattr(self, name).
- |  
+ |
  |  __getnewargs__(self, /)
- |  
+ |
  |  __gt__(self, value, /)
  |      Return self&gt;value.
- |  
+ |
  |  __hash__(self, /)
  |      Return hash(self).
- |  
+ |
  |  __index__(self, /)
  |      Return self converted to an integer, if self is suitable for use as an index into a list.
- |  
+ |
  |  __int__(self, /)
  |      int(self)
- |  
+ |
  |  __invert__(self, /)
  |      ~self
- |  
+ |
  |  __le__(self, value, /)
  |      Return self&lt;=value.
- |  
+ |
  |  __lshift__(self, value, /)
  |      Return self&lt;&lt;value.
- |  
+ |
  |  __lt__(self, value, /)
  |      Return self&lt;value.
- |  
+ |
  |  __mod__(self, value, /)
  |      Return self%value.
- |  
+ |
  |  __mul__(self, value, /)
  |      Return self*value.
- |  
+ |
  |  __ne__(self, value, /)
  |      Return self!=value.
- |  
+ |
  |  __neg__(self, /)
  |      -self
- |  
+ |
  |  __or__(self, value, /)
  |      Return self|value.
- |  
+ |
  |  __pos__(self, /)
  |      +self
- |  
+ |
  |  __pow__(self, value, mod=None, /)
  |      Return pow(self, value, mod).
- |  
+ |
  |  __radd__(self, value, /)
  |      Return value+self.
- |  
+ |
  |  __rand__(self, value, /)
  |      Return value&amp;self.
- |  
+ |
  |  __rdivmod__(self, value, /)
  |      Return divmod(value, self).
- |  
+ |
  |  __repr__(self, /)
  |      Return repr(self).
- |  
+ |
  |  __rfloordiv__(self, value, /)
  |      Return value//self.
- |  
+ |
  |  __rlshift__(self, value, /)
  |      Return value&lt;&lt;self.
- |  
+ |
  |  __rmod__(self, value, /)
  |      Return value%self.
- |  
+ |
  |  __rmul__(self, value, /)
  |      Return value*self.
- |  
+ |
  |  __ror__(self, value, /)
  |      Return value|self.
- |  
+ |
  |  __round__(...)
  |      Rounding an Integral returns itself.
- |      
+ |
  |      Rounding with an ndigits argument also returns an integer.
- |  
+ |
  |  __rpow__(self, value, mod=None, /)
  |      Return pow(value, self, mod).
- |  
+ |
  |  __rrshift__(self, value, /)
  |      Return value&gt;&gt;self.
- |  
+ |
  |  __rshift__(self, value, /)
  |      Return self&gt;&gt;value.
- |  
+ |
  |  __rsub__(self, value, /)
  |      Return value-self.
- |  
+ |
  |  __rtruediv__(self, value, /)
  |      Return value/self.
- |  
+ |
  |  __rxor__(self, value, /)
  |      Return value^self.
- |  
+ |
  |  __sizeof__(self, /)
  |      Returns size in memory, in bytes.
- |  
+ |
  |  __sub__(self, value, /)
  |      Return self-value.
- |  
+ |
  |  __truediv__(self, value, /)
  |      Return self/value.
- |  
+ |
  |  __trunc__(...)
  |      Truncating an Integral returns itself.
- |  
+ |
  |  __xor__(self, value, /)
  |      Return self^value.
- |  
+ |
  |  as_integer_ratio(self, /)
- |      Return integer ratio.
- |      
- |      Return a pair of integers, whose ratio is exactly equal to the original int
- |      and with a positive denominator.
- |      
+ |      Return a pair of integers, whose ratio is equal to the original int.
+ |
+ |      The ratio is in lowest terms and has a positive denominator.
+ |
  |      &gt;&gt;&gt; (10).as_integer_ratio()
  |      (10, 1)
  |      &gt;&gt;&gt; (-10).as_integer_ratio()
  |      (-10, 1)
  |      &gt;&gt;&gt; (0).as_integer_ratio()
  |      (0, 1)
- |  
+ |
  |  bit_count(self, /)
  |      Number of ones in the binary representation of the absolute value of self.
- |      
+ |
  |      Also known as the population count.
- |      
+ |
  |      &gt;&gt;&gt; bin(13)
  |      '0b1101'
  |      &gt;&gt;&gt; (13).bit_count()
  |      3
- |  
+ |
  |  bit_length(self, /)
  |      Number of bits necessary to represent self in binary.
- |      
+ |
  |      &gt;&gt;&gt; bin(37)
  |      '0b100101'
  |      &gt;&gt;&gt; (37).bit_length()
  |      6
- |  
+ |
  |  conjugate(...)
  |      Returns self, the complex conjugate of any int.
- |  
+ |
+ |  is_integer(self, /)
+ |      Returns True. Exists for duck type compatibility with float.is_integer.
+ |
  |  to_bytes(self, /, length=1, byteorder='big', *, signed=False)
  |      Return an array of bytes representing an integer.
- |      
+ |
  |      length
  |        Length of bytes object to use.  An OverflowError is raised if the
  |        integer is not representable with the given number of bytes.  Default
@@ -7829,13 +7831,13 @@ class int(object)
  |        Determines whether two's complement is used to represent the integer.
  |        If signed is False and a negative integer is given, an OverflowError
  |        is raised.
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Class methods defined here:
- |  
- |  from_bytes(bytes, byteorder='big', *, signed=False) from builtins.type
+ |
+ |  from_bytes(bytes, byteorder='big', *, signed=False)
  |      Return the integer represented by the given array of bytes.
- |      
+ |
  |      bytes
  |        Holds the array of bytes to convert.  The argument must either
  |        support the buffer protocol or be an iterable object producing bytes.
@@ -7849,25 +7851,25 @@ class int(object)
  |        `sys.byteorder' as the byte order value.  Default is to use 'big'.
  |      signed
  |        Indicates whether two's complement is used to represent the integer.
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Static methods defined here:
- |  
- |  __new__(*args, **kwargs) from builtins.type
+ |
+ |  __new__(*args, **kwargs)
  |      Create and return a new object.  See help(type) for accurate signature.
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Data descriptors defined here:
- |  
+ |
  |  denominator
  |      the denominator of a rational number in lowest terms
- |  
+ |
  |  imag
  |      the imaginary part of a complex number
- |  
+ |
  |  numerator
  |      the numerator of a rational number in lowest terms
- |  
+ |
  |  real
  |      the real part of a complex number
 
@@ -8422,7 +8424,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
@@ -8436,7 +8438,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>9</pre>
 </div>
@@ -8459,7 +8461,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="fm">__len__</span><span class="p">()</span>
@@ -8473,7 +8475,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>9</pre>
 </div>
@@ -8496,7 +8498,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">g</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>
@@ -8510,7 +8512,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">g</span>
@@ -8524,7 +8526,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>[[1, 2, 3, 4], [5, 6, 7, 8]]</pre>
 </div>
@@ -8536,7 +8538,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -8565,7 +8567,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
@@ -8605,7 +8607,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">h</span><span class="o">=</span><span class="s1">'this is a string'</span>
@@ -8633,7 +8635,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[14], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
@@ -8702,7 +8704,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="s2">"Statement_1"</span>
@@ -8746,7 +8748,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -8777,7 +8779,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
@@ -8816,7 +8818,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mi">1</span>
@@ -8858,7 +8860,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -8900,7 +8902,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="nb">tuple</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -8958,7 +8960,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>     <span class="c1"># list a</span>
@@ -9010,7 +9012,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">la</span><span class="o">=</span><span class="mi">5</span>
@@ -9065,7 +9067,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Lists of same length</span>
@@ -9113,7 +9115,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -9159,7 +9161,7 @@ this is a string</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -9188,7 +9190,7 @@ this is a string</pre>
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
 <span class="ansi-red-intense-fg ansi-bold">IndexError</span>                                Traceback (most recent call last)
-Cell <span class="ansi-green-intense-fg ansi-bold">In[37], line 8</span>
+Cell <span class="ansi-green-intense-fg ansi-bold">In[33], line 8</span>
 <span class="ansi-green-fg">      5</span> la<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(0,135,0)">len</span>(a)
 <span class="ansi-green-fg">      7</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> ip <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">range</span>(la):
 <span class="ansi-green-intense-fg ansi-bold">----&gt; 8</span>     isum<span style="color: rgb(98,98,98)">=</span>a[ip]<span style="color: rgb(98,98,98)">+</span>b[ip]
@@ -9217,7 +9219,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[37], line 8</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -9261,7 +9263,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[37], line 8</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
@@ -9304,7 +9306,7 @@ Sorted list:    [1, 2, 3, 4]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
@@ -9347,7 +9349,7 @@ Sorted list:    [1, 2, 3, 4]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
@@ -9402,7 +9404,7 @@ Original list:  [4, 3, 2, 1]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
@@ -9442,7 +9444,7 @@ Original list:  [4, 3, 2, 1]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>   <span class="c1"># import the numpy module with the 'np' alias</span>
@@ -9472,7 +9474,7 @@ Original list:  [4, 3, 2, 1]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>   <span class="c1"># size of a</span>
@@ -9510,7 +9512,7 @@ Original list:  [4, 3, 2, 1]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>   <span class="c1"># size is also an attribute of the array</span>
@@ -9548,7 +9550,7 @@ Original list:  [4, 3, 2, 1]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span>
@@ -9562,7 +9564,7 @@ Original list:  [4, 3, 2, 1]
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>dtype('int32')</pre>
 </div>
@@ -9585,7 +9587,7 @@ Original list:  [4, 3, 2, 1]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -9606,24 +9608,24 @@ Original list:  [4, 3, 2, 1]
 class ndarray(builtins.object)
  |  ndarray(shape, dtype=float, buffer=None, offset=0,
  |          strides=None, order=None)
- |  
+ |
  |  An array object represents a multidimensional, homogeneous array
  |  of fixed-size items.  An associated data-type object describes the
  |  format of each element in the array (its byte-order, how many bytes it
  |  occupies in memory, whether it is an integer, a floating point number,
  |  or something else, etc.)
- |  
+ |
  |  Arrays should be constructed using `array`, `zeros` or `empty` (refer
  |  to the See Also section below).  The parameters given here refer to
  |  a low-level method (`ndarray(...)`) for instantiating an array.
- |  
+ |
  |  For more information, refer to the `numpy` module and examine the
  |  methods and attributes of an array.
- |  
+ |
  |  Parameters
  |  ----------
  |  (for the __new__ method; see Notes below)
- |  
+ |
  |  shape : tuple of ints
  |      Shape of created array.
  |  dtype : data-type, optional
@@ -9636,7 +9638,7 @@ class ndarray(builtins.object)
  |      Strides of data in memory.
  |  order : {'C', 'F'}, optional
  |      Row-major (C-style) or column-major (Fortran-style) order.
- |  
+ |
  |  Attributes
  |  ----------
  |  T : ndarray
@@ -9681,7 +9683,7 @@ class ndarray(builtins.object)
  |      If the array is a view into another array, that array is its `base`
  |      (unless that array is also a view).  The `base` array is where the
  |      array data is actually stored.
- |  
+ |
  |  See Also
  |  --------
  |  array : Construct an array.
@@ -9691,286 +9693,291 @@ class ndarray(builtins.object)
  |  dtype : Create a data-type.
  |  numpy.typing.NDArray : An ndarray alias :term:`generic &lt;generic type&gt;`
  |                         w.r.t. its `dtype.type &lt;numpy.dtype.type&gt;`.
- |  
+ |
  |  Notes
  |  -----
  |  There are two modes of creating an array using ``__new__``:
- |  
+ |
  |  1. If `buffer` is None, then only `shape`, `dtype`, and `order`
  |     are used.
  |  2. If `buffer` is an object exposing the buffer interface, then
  |     all keywords are interpreted.
- |  
+ |
  |  No ``__init__`` method is needed because the array is fully initialized
  |  after the ``__new__`` method.
- |  
+ |
  |  Examples
  |  --------
  |  These examples illustrate the low-level `ndarray` constructor.  Refer
  |  to the `See Also` section above for easier ways of constructing an
  |  ndarray.
- |  
+ |
  |  First mode, `buffer` is None:
- |  
+ |
  |  &gt;&gt;&gt; np.ndarray(shape=(2,2), dtype=float, order='F')
  |  array([[0.0e+000, 0.0e+000], # random
  |         [     nan, 2.5e-323]])
- |  
+ |
  |  Second mode:
- |  
+ |
  |  &gt;&gt;&gt; np.ndarray((2,), buffer=np.array([1,2,3]),
  |  ...            offset=np.int_().itemsize,
  |  ...            dtype=int) # offset = 1*itemsize, i.e. skip first element
  |  array([2, 3])
- |  
+ |
  |  Methods defined here:
- |  
+ |
  |  __abs__(self, /)
  |      abs(self)
- |  
+ |
  |  __add__(self, value, /)
  |      Return self+value.
- |  
+ |
  |  __and__(self, value, /)
  |      Return self&amp;value.
- |  
+ |
  |  __array__(...)
  |      a.__array__([dtype], /)
- |      
+ |
  |      Returns either a new reference to self if dtype is not given or a new array
  |      of provided data type if dtype is different from the current dtype of the
  |      array.
- |  
+ |
  |  __array_finalize__(...)
  |      a.__array_finalize__(obj, /)
- |      
+ |
  |      Present so subclasses can call super. Does nothing.
- |  
+ |
  |  __array_function__(...)
- |  
+ |
  |  __array_prepare__(...)
  |      a.__array_prepare__(array[, context], /)
- |      
+ |
  |      Returns a view of `array` with the same type as self.
- |  
+ |
  |  __array_ufunc__(...)
- |  
+ |
  |  __array_wrap__(...)
  |      a.__array_wrap__(array[, context], /)
- |      
+ |
  |      Returns a view of `array` with the same type as self.
- |  
+ |
  |  __bool__(self, /)
  |      True if self else False
- |  
+ |
+ |  __buffer__(self, flags, /)
+ |      Return a buffer object that exposes the underlying memory of the object.
+ |
  |  __complex__(...)
- |  
+ |
  |  __contains__(self, key, /)
- |      Return key in self.
- |  
+ |      Return bool(key in self).
+ |
  |  __copy__(...)
  |      a.__copy__()
- |      
+ |
  |      Used if :func:`copy.copy` is called on an array. Returns a copy of the array.
- |      
+ |
  |      Equivalent to ``a.copy(order='K')``.
- |  
+ |
  |  __deepcopy__(...)
  |      a.__deepcopy__(memo, /)
- |      
+ |
  |      Used if :func:`copy.deepcopy` is called on an array.
- |  
+ |
  |  __delitem__(self, key, /)
  |      Delete self[key].
- |  
+ |
  |  __divmod__(self, value, /)
  |      Return divmod(self, value).
- |  
+ |
  |  __dlpack__(...)
  |      a.__dlpack__(*, stream=None)
- |      
+ |
  |      DLPack Protocol: Part of the Array API.
- |  
+ |
  |  __dlpack_device__(...)
  |      a.__dlpack_device__()
- |      
+ |
  |      DLPack Protocol: Part of the Array API.
- |  
+ |
  |  __eq__(self, value, /)
  |      Return self==value.
- |  
+ |
  |  __float__(self, /)
  |      float(self)
- |  
+ |
  |  __floordiv__(self, value, /)
  |      Return self//value.
- |  
+ |
  |  __format__(...)
  |      Default object formatter.
- |  
+ |
+ |      Return str(self) if format_spec is empty. Raise TypeError otherwise.
+ |
  |  __ge__(self, value, /)
  |      Return self&gt;=value.
- |  
+ |
  |  __getitem__(self, key, /)
  |      Return self[key].
- |  
+ |
  |  __gt__(self, value, /)
  |      Return self&gt;value.
- |  
+ |
  |  __iadd__(self, value, /)
  |      Return self+=value.
- |  
+ |
  |  __iand__(self, value, /)
  |      Return self&amp;=value.
- |  
+ |
  |  __ifloordiv__(self, value, /)
  |      Return self//=value.
- |  
+ |
  |  __ilshift__(self, value, /)
  |      Return self&lt;&lt;=value.
- |  
+ |
  |  __imatmul__(self, value, /)
  |      Return self@=value.
- |  
+ |
  |  __imod__(self, value, /)
  |      Return self%=value.
- |  
+ |
  |  __imul__(self, value, /)
  |      Return self*=value.
- |  
+ |
  |  __index__(self, /)
  |      Return self converted to an integer, if self is suitable for use as an index into a list.
- |  
+ |
  |  __int__(self, /)
  |      int(self)
- |  
+ |
  |  __invert__(self, /)
  |      ~self
- |  
+ |
  |  __ior__(self, value, /)
  |      Return self|=value.
- |  
+ |
  |  __ipow__(self, value, /)
  |      Return self**=value.
- |  
+ |
  |  __irshift__(self, value, /)
  |      Return self&gt;&gt;=value.
- |  
+ |
  |  __isub__(self, value, /)
  |      Return self-=value.
- |  
+ |
  |  __iter__(self, /)
  |      Implement iter(self).
- |  
+ |
  |  __itruediv__(self, value, /)
  |      Return self/=value.
- |  
+ |
  |  __ixor__(self, value, /)
  |      Return self^=value.
- |  
+ |
  |  __le__(self, value, /)
  |      Return self&lt;=value.
- |  
+ |
  |  __len__(self, /)
  |      Return len(self).
- |  
+ |
  |  __lshift__(self, value, /)
  |      Return self&lt;&lt;value.
- |  
+ |
  |  __lt__(self, value, /)
  |      Return self&lt;value.
- |  
+ |
  |  __matmul__(self, value, /)
  |      Return self@value.
- |  
+ |
  |  __mod__(self, value, /)
  |      Return self%value.
- |  
+ |
  |  __mul__(self, value, /)
  |      Return self*value.
- |  
+ |
  |  __ne__(self, value, /)
  |      Return self!=value.
- |  
+ |
  |  __neg__(self, /)
  |      -self
- |  
+ |
  |  __or__(self, value, /)
  |      Return self|value.
- |  
+ |
  |  __pos__(self, /)
  |      +self
- |  
+ |
  |  __pow__(self, value, mod=None, /)
  |      Return pow(self, value, mod).
- |  
+ |
  |  __radd__(self, value, /)
  |      Return value+self.
- |  
+ |
  |  __rand__(self, value, /)
  |      Return value&amp;self.
- |  
+ |
  |  __rdivmod__(self, value, /)
  |      Return divmod(value, self).
- |  
+ |
  |  __reduce__(...)
  |      a.__reduce__()
- |      
+ |
  |      For pickling.
- |  
+ |
  |  __reduce_ex__(...)
  |      Helper for pickle.
- |  
+ |
  |  __repr__(self, /)
  |      Return repr(self).
- |  
+ |
  |  __rfloordiv__(self, value, /)
  |      Return value//self.
- |  
+ |
  |  __rlshift__(self, value, /)
  |      Return value&lt;&lt;self.
- |  
+ |
  |  __rmatmul__(self, value, /)
  |      Return value@self.
- |  
+ |
  |  __rmod__(self, value, /)
  |      Return value%self.
- |  
+ |
  |  __rmul__(self, value, /)
  |      Return value*self.
- |  
+ |
  |  __ror__(self, value, /)
  |      Return value|self.
- |  
+ |
  |  __rpow__(self, value, mod=None, /)
  |      Return pow(value, self, mod).
- |  
+ |
  |  __rrshift__(self, value, /)
  |      Return value&gt;&gt;self.
- |  
+ |
  |  __rshift__(self, value, /)
  |      Return self&gt;&gt;value.
- |  
+ |
  |  __rsub__(self, value, /)
  |      Return value-self.
- |  
+ |
  |  __rtruediv__(self, value, /)
  |      Return value/self.
- |  
+ |
  |  __rxor__(self, value, /)
  |      Return value^self.
- |  
+ |
  |  __setitem__(self, key, value, /)
  |      Set self[key] to value.
- |  
+ |
  |  __setstate__(...)
  |      a.__setstate__(state, /)
- |      
+ |
  |      For unpickling.
- |      
+ |
  |      The `state` argument must be a sequence that contains the following
  |      elements:
- |      
+ |
  |      Parameters
  |      ----------
  |      version : int
@@ -9980,95 +9987,95 @@ class ndarray(builtins.object)
  |      isFortran : bool
  |      rawdata : string or list
  |          a binary string with the data (or a list if 'a' is an object array)
- |  
+ |
  |  __sizeof__(...)
  |      Size of object in memory, in bytes.
- |  
+ |
  |  __str__(self, /)
  |      Return str(self).
- |  
+ |
  |  __sub__(self, value, /)
  |      Return self-value.
- |  
+ |
  |  __truediv__(self, value, /)
  |      Return self/value.
- |  
+ |
  |  __xor__(self, value, /)
  |      Return self^value.
- |  
+ |
  |  all(...)
  |      a.all(axis=None, out=None, keepdims=False, *, where=True)
- |      
+ |
  |      Returns True if all elements evaluate to True.
- |      
+ |
  |      Refer to `numpy.all` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.all : equivalent function
- |  
+ |
  |  any(...)
  |      a.any(axis=None, out=None, keepdims=False, *, where=True)
- |      
+ |
  |      Returns True if any of the elements of `a` evaluate to True.
- |      
+ |
  |      Refer to `numpy.any` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.any : equivalent function
- |  
+ |
  |  argmax(...)
  |      a.argmax(axis=None, out=None, *, keepdims=False)
- |      
+ |
  |      Return indices of the maximum values along the given axis.
- |      
+ |
  |      Refer to `numpy.argmax` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.argmax : equivalent function
- |  
+ |
  |  argmin(...)
  |      a.argmin(axis=None, out=None, *, keepdims=False)
- |      
+ |
  |      Return indices of the minimum values along the given axis.
- |      
+ |
  |      Refer to `numpy.argmin` for detailed documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.argmin : equivalent function
- |  
+ |
  |  argpartition(...)
  |      a.argpartition(kth, axis=-1, kind='introselect', order=None)
- |      
+ |
  |      Returns the indices that would partition this array.
- |      
+ |
  |      Refer to `numpy.argpartition` for full documentation.
- |      
+ |
  |      .. versionadded:: 1.8.0
- |      
+ |
  |      See Also
  |      --------
  |      numpy.argpartition : equivalent function
- |  
+ |
  |  argsort(...)
  |      a.argsort(axis=-1, kind=None, order=None)
- |      
+ |
  |      Returns the indices that would sort this array.
- |      
+ |
  |      Refer to `numpy.argsort` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.argsort : equivalent function
- |  
+ |
  |  astype(...)
  |      a.astype(dtype, order='K', casting='unsafe', subok=True, copy=True)
- |      
+ |
  |      Copy of the array, cast to a specified type.
- |      
+ |
  |      Parameters
  |      ----------
  |      dtype : str or dtype
@@ -10083,7 +10090,7 @@ class ndarray(builtins.object)
  |      casting : {'no', 'equiv', 'safe', 'same_kind', 'unsafe'}, optional
  |          Controls what kind of data casting may occur. Defaults to 'unsafe'
  |          for backwards compatibility.
- |      
+ |
  |            * 'no' means the data types should not be cast at all.
  |            * 'equiv' means only byte-order changes are allowed.
  |            * 'safe' means only casts which can preserve values are allowed.
@@ -10098,7 +10105,7 @@ class ndarray(builtins.object)
  |          is set to false, and the `dtype`, `order`, and `subok`
  |          requirements are satisfied, the input array is returned instead
  |          of a copy.
- |      
+ |
  |      Returns
  |      -------
  |      arr_t : ndarray
@@ -10106,55 +10113,55 @@ class ndarray(builtins.object)
  |          array are satisfied (see description for `copy` input parameter), `arr_t`
  |          is a new array of the same shape as the input array, with dtype, order
  |          given by `dtype`, `order`.
- |      
+ |
  |      Notes
  |      -----
  |      .. versionchanged:: 1.17.0
  |         Casting between a simple data type and a structured one is possible only
  |         for "unsafe" casting.  Casting to multiple fields is allowed, but
  |         casting from multiple fields is not.
- |      
+ |
  |      .. versionchanged:: 1.9.0
  |         Casting from numeric to string types in 'safe' casting mode requires
  |         that the string dtype length is long enough to store the max
  |         integer/float value converted.
- |      
+ |
  |      Raises
  |      ------
  |      ComplexWarning
  |          When casting from complex to float or int. To avoid this,
  |          one should use ``a.real.astype(t)``.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.array([1, 2, 2.5])
  |      &gt;&gt;&gt; x
  |      array([1. ,  2. ,  2.5])
- |      
+ |
  |      &gt;&gt;&gt; x.astype(int)
  |      array([1, 2, 2])
- |  
+ |
  |  byteswap(...)
  |      a.byteswap(inplace=False)
- |      
+ |
  |      Swap the bytes of the array elements
- |      
+ |
  |      Toggle between low-endian and big-endian data representation by
  |      returning a byteswapped array, optionally swapped in-place.
  |      Arrays of byte-strings are not swapped. The real and imaginary
  |      parts of a complex number are swapped individually.
- |      
+ |
  |      Parameters
  |      ----------
  |      inplace : bool, optional
  |          If ``True``, swap bytes in-place, default is ``False``.
- |      
+ |
  |      Returns
  |      -------
  |      out : ndarray
  |          The byteswapped array. If `inplace` is ``True``, this is
  |          a view to self.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; A = np.array([1, 256, 8755], dtype=np.int16)
@@ -10164,16 +10171,16 @@ class ndarray(builtins.object)
  |      array([  256,     1, 13090], dtype=int16)
  |      &gt;&gt;&gt; list(map(hex, A))
  |      ['0x100', '0x1', '0x3322']
- |      
+ |
  |      Arrays of byte-strings are not swapped
- |      
+ |
  |      &gt;&gt;&gt; A = np.array([b'ceg', b'fac'])
  |      &gt;&gt;&gt; A.byteswap()
  |      array([b'ceg', b'fac'], dtype='|S3')
- |      
+ |
  |      ``A.newbyteorder().byteswap()`` produces an array with the same values
  |        but different representation in memory
- |      
+ |
  |      &gt;&gt;&gt; A = np.array([1, 2, 3])
  |      &gt;&gt;&gt; A.view(np.uint8)
  |      array([1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0,
@@ -10183,68 +10190,68 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; A.view(np.uint8)
  |      array([0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0,
  |             0, 3], dtype=uint8)
- |  
+ |
  |  choose(...)
  |      a.choose(choices, out=None, mode='raise')
- |      
+ |
  |      Use an index array to construct a new array from a set of choices.
- |      
+ |
  |      Refer to `numpy.choose` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.choose : equivalent function
- |  
+ |
  |  clip(...)
  |      a.clip(min=None, max=None, out=None, **kwargs)
- |      
+ |
  |      Return an array whose values are limited to ``[min, max]``.
  |      One of max or min must be given.
- |      
+ |
  |      Refer to `numpy.clip` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.clip : equivalent function
- |  
+ |
  |  compress(...)
  |      a.compress(condition, axis=None, out=None)
- |      
+ |
  |      Return selected slices of this array along given axis.
- |      
+ |
  |      Refer to `numpy.compress` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.compress : equivalent function
- |  
+ |
  |  conj(...)
  |      a.conj()
- |      
+ |
  |      Complex-conjugate all elements.
- |      
+ |
  |      Refer to `numpy.conjugate` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.conjugate : equivalent function
- |  
+ |
  |  conjugate(...)
  |      a.conjugate()
- |      
+ |
  |      Return the complex conjugate, element-wise.
- |      
+ |
  |      Refer to `numpy.conjugate` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.conjugate : equivalent function
- |  
+ |
  |  copy(...)
  |      a.copy(order='C')
- |      
+ |
  |      Return a copy of the array.
- |      
+ |
  |      Parameters
  |      ----------
  |      order : {'C', 'F', 'A', 'K'}, optional
@@ -10254,108 +10261,108 @@ class ndarray(builtins.object)
  |          as possible. (Note that this function and :func:`numpy.copy` are very
  |          similar but have different default values for their order=
  |          arguments, and this function always passes sub-classes through.)
- |      
+ |
  |      See also
  |      --------
  |      numpy.copy : Similar function with different default behavior
  |      numpy.copyto
- |      
+ |
  |      Notes
  |      -----
  |      This function is the preferred method for creating an array copy.  The
  |      function :func:`numpy.copy` is similar, but it defaults to using order 'K',
  |      and will not pass sub-classes through by default.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.array([[1,2,3],[4,5,6]], order='F')
- |      
+ |
  |      &gt;&gt;&gt; y = x.copy()
- |      
+ |
  |      &gt;&gt;&gt; x.fill(0)
- |      
+ |
  |      &gt;&gt;&gt; x
  |      array([[0, 0, 0],
  |             [0, 0, 0]])
- |      
+ |
  |      &gt;&gt;&gt; y
  |      array([[1, 2, 3],
  |             [4, 5, 6]])
- |      
+ |
  |      &gt;&gt;&gt; y.flags['C_CONTIGUOUS']
  |      True
- |  
+ |
  |  cumprod(...)
  |      a.cumprod(axis=None, dtype=None, out=None)
- |      
+ |
  |      Return the cumulative product of the elements along the given axis.
- |      
+ |
  |      Refer to `numpy.cumprod` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.cumprod : equivalent function
- |  
+ |
  |  cumsum(...)
  |      a.cumsum(axis=None, dtype=None, out=None)
- |      
+ |
  |      Return the cumulative sum of the elements along the given axis.
- |      
+ |
  |      Refer to `numpy.cumsum` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.cumsum : equivalent function
- |  
+ |
  |  diagonal(...)
  |      a.diagonal(offset=0, axis1=0, axis2=1)
- |      
+ |
  |      Return specified diagonals. In NumPy 1.9 the returned array is a
  |      read-only view instead of a copy as in previous NumPy versions.  In
  |      a future version the read-only restriction will be removed.
- |      
+ |
  |      Refer to :func:`numpy.diagonal` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.diagonal : equivalent function
- |  
+ |
  |  dot(...)
- |  
+ |
  |  dump(...)
  |      a.dump(file)
- |      
+ |
  |      Dump a pickle of the array to the specified file.
  |      The array can be read back with pickle.load or numpy.load.
- |      
+ |
  |      Parameters
  |      ----------
  |      file : str or Path
  |          A string naming the dump file.
- |      
+ |
  |          .. versionchanged:: 1.17.0
  |              `pathlib.Path` objects are now accepted.
- |  
+ |
  |  dumps(...)
  |      a.dumps()
- |      
+ |
  |      Returns the pickle of the array as a string.
  |      pickle.loads will convert the string back to an array.
- |      
+ |
  |      Parameters
  |      ----------
  |      None
- |  
+ |
  |  fill(...)
  |      a.fill(value)
- |      
+ |
  |      Fill the array with a scalar value.
- |      
+ |
  |      Parameters
  |      ----------
  |      value : scalar
  |          All elements of `a` will be assigned this value.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; a = np.array([1, 2])
@@ -10366,11 +10373,11 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; a.fill(1)
  |      &gt;&gt;&gt; a
  |      array([1.,  1.])
- |      
+ |
  |      Fill expects a scalar value and always behaves the same as assigning
  |      to a single array element.  The following is a rare example where this
  |      distinction is important:
- |      
+ |
  |      &gt;&gt;&gt; a = np.array([None, None], dtype=object)
  |      &gt;&gt;&gt; a[0] = np.array(3)
  |      &gt;&gt;&gt; a
@@ -10378,18 +10385,18 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; a.fill(np.array(3))
  |      &gt;&gt;&gt; a
  |      array([array(3), array(3)], dtype=object)
- |      
+ |
  |      Where other forms of assignments will unpack the array being assigned:
- |      
+ |
  |      &gt;&gt;&gt; a[...] = np.array(3)
  |      &gt;&gt;&gt; a
  |      array([3, 3], dtype=object)
- |  
+ |
  |  flatten(...)
  |      a.flatten(order='C')
- |      
+ |
  |      Return a copy of the array collapsed into one dimension.
- |      
+ |
  |      Parameters
  |      ----------
  |      order : {'C', 'F', 'A', 'K'}, optional
@@ -10400,17 +10407,17 @@ class ndarray(builtins.object)
  |          row-major order otherwise. 'K' means to flatten
  |          `a` in the order the elements occur in memory.
  |          The default is 'C'.
- |      
+ |
  |      Returns
  |      -------
  |      y : ndarray
  |          A copy of the input array, flattened to one dimension.
- |      
+ |
  |      See Also
  |      --------
  |      ravel : Return a flattened array.
  |      flat : A 1-D flat iterator over the array.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; a = np.array([[1,2], [3,4]])
@@ -10418,19 +10425,19 @@ class ndarray(builtins.object)
  |      array([1, 2, 3, 4])
  |      &gt;&gt;&gt; a.flatten('F')
  |      array([1, 3, 2, 4])
- |  
+ |
  |  getfield(...)
  |      a.getfield(dtype, offset=0)
- |      
+ |
  |      Returns a field of the given array as a certain type.
- |      
+ |
  |      A field is a view of the array data with a given data-type. The values in
  |      the view are determined by the given type and the offset into the current
  |      array in bytes. The offset needs to be such that the view dtype fits in the
  |      array dtype; for example an array of dtype complex128 has 16-byte elements.
  |      If taking a view with a 32-bit integer (4 bytes), the offset needs to be
  |      between 0 and 12 bytes.
- |      
+ |
  |      Parameters
  |      ----------
  |      dtype : str or dtype
@@ -10438,7 +10445,7 @@ class ndarray(builtins.object)
  |          than that of the array itself.
  |      offset : int
  |          Number of bytes to skip before beginning the element view.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.diag([1.+1.j]*2)
@@ -10449,52 +10456,52 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; x.getfield(np.float64)
  |      array([[1.,  0.],
  |             [0.,  2.]])
- |      
+ |
  |      By choosing an offset of 8 bytes we can select the complex part of the
  |      array for our view:
- |      
+ |
  |      &gt;&gt;&gt; x.getfield(np.float64, offset=8)
  |      array([[1.,  0.],
  |             [0.,  4.]])
- |  
+ |
  |  item(...)
  |      a.item(*args)
- |      
+ |
  |      Copy an element of an array to a standard Python scalar and return it.
- |      
+ |
  |      Parameters
  |      ----------
  |      \*args : Arguments (variable number and type)
- |      
+ |
  |          * none: in this case, the method only works for arrays
  |            with one element (`a.size == 1`), which element is
  |            copied into a standard Python scalar object and returned.
- |      
+ |
  |          * int_type: this argument is interpreted as a flat index into
  |            the array, specifying which element to copy and return.
- |      
+ |
  |          * tuple of int_types: functions as does a single int_type argument,
  |            except that the argument is interpreted as an nd-index into the
  |            array.
- |      
+ |
  |      Returns
  |      -------
  |      z : Standard Python scalar object
  |          A copy of the specified element of the array as a suitable
  |          Python scalar
- |      
+ |
  |      Notes
  |      -----
  |      When the data type of `a` is longdouble or clongdouble, item() returns
  |      a scalar array object because there is no available Python scalar that
  |      would not lose information. Void arrays return a buffer object for item(),
  |      unless fields are defined, in which case a tuple is returned.
- |      
+ |
  |      `item` is very similar to a[args], except, instead of an array scalar,
  |      a standard Python scalar is returned. This can be useful for speeding up
  |      access to elements of the array and doing arithmetic on elements of the
  |      array using Python's optimized math.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; np.random.seed(123)
@@ -10511,17 +10518,17 @@ class ndarray(builtins.object)
  |      2
  |      &gt;&gt;&gt; x.item((2, 2))
  |      1
- |  
+ |
  |  itemset(...)
  |      a.itemset(*args)
- |      
+ |
  |      Insert scalar into an array (scalar is cast to array's dtype, if possible)
- |      
+ |
  |      There must be at least 1 argument, and define the last argument
  |      as *item*.  Then, ``a.itemset(*args)`` is equivalent to but faster
  |      than ``a[args] = item``.  The item should be a scalar value and `args`
  |      must select a single item in the array `a`.
- |      
+ |
  |      Parameters
  |      ----------
  |      \*args : Arguments
@@ -10529,7 +10536,7 @@ class ndarray(builtins.object)
  |          If two arguments: the last argument is the value to be set
  |          and must be a scalar, the first argument specifies a single array
  |          element location. It is either an int or a tuple.
- |      
+ |
  |      Notes
  |      -----
  |      Compared to indexing syntax, `itemset` provides some speed increase
@@ -10539,7 +10546,7 @@ class ndarray(builtins.object)
  |      Also, when using `itemset` (and `item`) inside a loop, be sure
  |      to assign the methods to a local variable to avoid the attribute
  |      look-up at each loop iteration.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; np.random.seed(123)
@@ -10554,98 +10561,98 @@ class ndarray(builtins.object)
  |      array([[2, 2, 6],
  |             [1, 0, 6],
  |             [1, 0, 9]])
- |  
+ |
  |  max(...)
  |      a.max(axis=None, out=None, keepdims=False, initial=&lt;no value&gt;, where=True)
- |      
+ |
  |      Return the maximum along a given axis.
- |      
+ |
  |      Refer to `numpy.amax` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.amax : equivalent function
- |  
+ |
  |  mean(...)
  |      a.mean(axis=None, dtype=None, out=None, keepdims=False, *, where=True)
- |      
+ |
  |      Returns the average of the array elements along given axis.
- |      
+ |
  |      Refer to `numpy.mean` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.mean : equivalent function
- |  
+ |
  |  min(...)
  |      a.min(axis=None, out=None, keepdims=False, initial=&lt;no value&gt;, where=True)
- |      
+ |
  |      Return the minimum along a given axis.
- |      
+ |
  |      Refer to `numpy.amin` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.amin : equivalent function
- |  
+ |
  |  newbyteorder(...)
  |      arr.newbyteorder(new_order='S', /)
- |      
+ |
  |      Return the array with the same data viewed with a different byte order.
- |      
+ |
  |      Equivalent to::
- |      
+ |
  |          arr.view(arr.dtype.newbytorder(new_order))
- |      
+ |
  |      Changes are also made in all fields and sub-arrays of the array data
  |      type.
- |      
- |      
- |      
+ |
+ |
+ |
  |      Parameters
  |      ----------
  |      new_order : string, optional
  |          Byte order to force; a value from the byte order specifications
  |          below. `new_order` codes can be any of:
- |      
+ |
  |          * 'S' - swap dtype from current to opposite endian
  |          * {'&lt;', 'little'} - little endian
  |          * {'&gt;', 'big'} - big endian
  |          * {'=', 'native'} - native order, equivalent to `sys.byteorder`
  |          * {'|', 'I'} - ignore (no change to byte order)
- |      
+ |
  |          The default value ('S') results in swapping the current
  |          byte order.
- |      
- |      
+ |
+ |
  |      Returns
  |      -------
  |      new_arr : array
  |          New array object with the dtype reflecting given change to the
  |          byte order.
- |  
+ |
  |  nonzero(...)
  |      a.nonzero()
- |      
+ |
  |      Return the indices of the elements that are non-zero.
- |      
+ |
  |      Refer to `numpy.nonzero` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.nonzero : equivalent function
- |  
+ |
  |  partition(...)
  |      a.partition(kth, axis=-1, kind='introselect', order=None)
- |      
+ |
  |      Rearranges the elements in the array in such a way that the value of the
  |      element in kth position is in the position it would be in a sorted array.
  |      All elements smaller than the kth element are moved before this element and
  |      all equal or greater are moved behind it. The ordering of the elements in
  |      the two partitions is undefined.
- |      
+ |
  |      .. versionadded:: 1.8.0
- |      
+ |
  |      Parameters
  |      ----------
  |      kth : int or sequence of ints
@@ -10655,7 +10662,7 @@ class ndarray(builtins.object)
  |          The order of all elements in the partitions is undefined.
  |          If provided with a sequence of kth it will partition all elements
  |          indexed by kth of them into their sorted position at once.
- |      
+ |
  |          .. deprecated:: 1.22.0
  |              Passing booleans as index is deprecated.
  |      axis : int, optional
@@ -10669,119 +10676,119 @@ class ndarray(builtins.object)
  |          be specified as a string, and not all fields need to be specified,
  |          but unspecified fields will still be used, in the order in which
  |          they come up in the dtype, to break ties.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.partition : Return a partitioned copy of an array.
  |      argpartition : Indirect partition.
  |      sort : Full sort.
- |      
+ |
  |      Notes
  |      -----
  |      See ``np.partition`` for notes on the different algorithms.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; a = np.array([3, 4, 2, 1])
  |      &gt;&gt;&gt; a.partition(3)
  |      &gt;&gt;&gt; a
  |      array([2, 1, 3, 4])
- |      
+ |
  |      &gt;&gt;&gt; a.partition((1, 3))
  |      &gt;&gt;&gt; a
  |      array([1, 2, 3, 4])
- |  
+ |
  |  prod(...)
  |      a.prod(axis=None, dtype=None, out=None, keepdims=False, initial=1, where=True)
- |      
+ |
  |      Return the product of the array elements over the given axis
- |      
+ |
  |      Refer to `numpy.prod` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.prod : equivalent function
- |  
+ |
  |  ptp(...)
  |      a.ptp(axis=None, out=None, keepdims=False)
- |      
+ |
  |      Peak to peak (maximum - minimum) value along a given axis.
- |      
+ |
  |      Refer to `numpy.ptp` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.ptp : equivalent function
- |  
+ |
  |  put(...)
  |      a.put(indices, values, mode='raise')
- |      
+ |
  |      Set ``a.flat[n] = values[n]`` for all `n` in indices.
- |      
+ |
  |      Refer to `numpy.put` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.put : equivalent function
- |  
+ |
  |  ravel(...)
  |      a.ravel([order])
- |      
+ |
  |      Return a flattened array.
- |      
+ |
  |      Refer to `numpy.ravel` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.ravel : equivalent function
- |      
+ |
  |      ndarray.flat : a flat iterator on the array.
- |  
+ |
  |  repeat(...)
  |      a.repeat(repeats, axis=None)
- |      
+ |
  |      Repeat elements of an array.
- |      
+ |
  |      Refer to `numpy.repeat` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.repeat : equivalent function
- |  
+ |
  |  reshape(...)
  |      a.reshape(shape, order='C')
- |      
+ |
  |      Returns an array containing the same data with a new shape.
- |      
+ |
  |      Refer to `numpy.reshape` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.reshape : equivalent function
- |      
+ |
  |      Notes
  |      -----
  |      Unlike the free function `numpy.reshape`, this method on `ndarray` allows
  |      the elements of the shape parameter to be passed in as separate arguments.
  |      For example, ``a.reshape(10, 11)`` is equivalent to
  |      ``a.reshape((10, 11))``.
- |  
+ |
  |  resize(...)
  |      a.resize(new_shape, refcheck=True)
- |      
+ |
  |      Change shape and size of array in-place.
- |      
+ |
  |      Parameters
  |      ----------
  |      new_shape : tuple of ints, or `n` ints
  |          Shape of resized array.
  |      refcheck : bool, optional
  |          If False, reference count will not be checked. Default is True.
- |      
+ |
  |      Returns
  |      -------
  |      None
- |      
+ |
  |      Raises
  |      ------
  |      ValueError
@@ -10790,100 +10797,100 @@ class ndarray(builtins.object)
  |          PyPy only: will always raise if the data memory must be changed, since
  |          there is no reliable way to determine if references or views to it
  |          exist.
- |      
+ |
  |      SystemError
  |          If the `order` keyword argument is specified. This behaviour is a
  |          bug in NumPy.
- |      
+ |
  |      See Also
  |      --------
  |      resize : Return a new array with the specified shape.
- |      
+ |
  |      Notes
  |      -----
  |      This reallocates space for the data area if necessary.
- |      
+ |
  |      Only contiguous arrays (data elements consecutive in memory) can be
  |      resized.
- |      
+ |
  |      The purpose of the reference count check is to make sure you
  |      do not use this array as a buffer for another Python object and then
  |      reallocate the memory. However, reference counts can increase in
  |      other ways so if you are sure that you have not shared the memory
  |      for this array with another Python object, then you may safely set
  |      `refcheck` to False.
- |      
+ |
  |      Examples
  |      --------
  |      Shrinking an array: array is flattened (in the order that the data are
  |      stored in memory), resized, and reshaped:
- |      
+ |
  |      &gt;&gt;&gt; a = np.array([[0, 1], [2, 3]], order='C')
  |      &gt;&gt;&gt; a.resize((2, 1))
  |      &gt;&gt;&gt; a
  |      array([[0],
  |             [1]])
- |      
+ |
  |      &gt;&gt;&gt; a = np.array([[0, 1], [2, 3]], order='F')
  |      &gt;&gt;&gt; a.resize((2, 1))
  |      &gt;&gt;&gt; a
  |      array([[0],
  |             [2]])
- |      
+ |
  |      Enlarging an array: as above, but missing entries are filled with zeros:
- |      
+ |
  |      &gt;&gt;&gt; b = np.array([[0, 1], [2, 3]])
  |      &gt;&gt;&gt; b.resize(2, 3) # new_shape parameter doesn't have to be a tuple
  |      &gt;&gt;&gt; b
  |      array([[0, 1, 2],
  |             [3, 0, 0]])
- |      
+ |
  |      Referencing an array prevents resizing...
- |      
+ |
  |      &gt;&gt;&gt; c = a
  |      &gt;&gt;&gt; a.resize((1, 1))
  |      Traceback (most recent call last):
  |      ...
  |      ValueError: cannot resize an array that references or is referenced ...
- |      
+ |
  |      Unless `refcheck` is False:
- |      
+ |
  |      &gt;&gt;&gt; a.resize((1, 1), refcheck=False)
  |      &gt;&gt;&gt; a
  |      array([[0]])
  |      &gt;&gt;&gt; c
  |      array([[0]])
- |  
+ |
  |  round(...)
  |      a.round(decimals=0, out=None)
- |      
+ |
  |      Return `a` with each element rounded to the given number of decimals.
- |      
+ |
  |      Refer to `numpy.around` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.around : equivalent function
- |  
+ |
  |  searchsorted(...)
  |      a.searchsorted(v, side='left', sorter=None)
- |      
+ |
  |      Find indices where elements of v should be inserted in a to maintain order.
- |      
+ |
  |      For full documentation, see `numpy.searchsorted`
- |      
+ |
  |      See Also
  |      --------
  |      numpy.searchsorted : equivalent function
- |  
+ |
  |  setfield(...)
  |      a.setfield(val, dtype, offset=0)
- |      
+ |
  |      Put a value into a specified place in a field defined by a data-type.
- |      
+ |
  |      Place `val` into `a`'s field defined by `dtype` and beginning `offset`
  |      bytes into the field.
- |      
+ |
  |      Parameters
  |      ----------
  |      val : object
@@ -10892,15 +10899,15 @@ class ndarray(builtins.object)
  |          Data-type of the field in which to place `val`.
  |      offset : int, optional
  |          The number of bytes into the field at which to place `val`.
- |      
+ |
  |      Returns
  |      -------
  |      None
- |      
+ |
  |      See Also
  |      --------
  |      getfield
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.eye(3)
@@ -10922,13 +10929,13 @@ class ndarray(builtins.object)
  |      array([[1.,  0.,  0.],
  |             [0.,  1.,  0.],
  |             [0.,  0.,  1.]])
- |  
+ |
  |  setflags(...)
  |      a.setflags(write=None, align=None, uic=None)
- |      
+ |
  |      Set array flags WRITEABLE, ALIGNED, WRITEBACKIFCOPY,
  |      respectively.
- |      
+ |
  |      These Boolean-valued flags affect how numpy interprets the memory
  |      area used by `a` (see Notes below). The ALIGNED flag can only
  |      be set to True if the data is actually aligned according to the type.
@@ -10937,7 +10944,7 @@ class ndarray(builtins.object)
  |      own memory, or the ultimate owner of the memory exposes a writeable buffer
  |      interface, or is a string. (The exception for string is made so that
  |      unpickling can be done without copying memory.)
- |      
+ |
  |      Parameters
  |      ----------
  |      write : bool, optional
@@ -10946,26 +10953,26 @@ class ndarray(builtins.object)
  |          Describes whether or not `a` is aligned properly for its type.
  |      uic : bool, optional
  |          Describes whether or not `a` is a copy of another "base" array.
- |      
+ |
  |      Notes
  |      -----
  |      Array flags provide information about how the memory area used
  |      for the array is to be interpreted. There are 7 Boolean flags
  |      in use, only four of which can be changed by the user:
  |      WRITEBACKIFCOPY, WRITEABLE, and ALIGNED.
- |      
+ |
  |      WRITEABLE (W) the data area can be written to;
- |      
+ |
  |      ALIGNED (A) the data and strides are aligned appropriately for the hardware
  |      (as determined by the compiler);
- |      
+ |
  |      WRITEBACKIFCOPY (X) this array is a copy of some other array (referenced
  |      by .base). When the C-API function PyArray_ResolveWritebackIfCopy is
  |      called, the base array will be updated with the contents of this array.
- |      
+ |
  |      All flags can be accessed using the single (upper case) letter as well
  |      as the full name.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; y = np.array([[3, 1, 7],
@@ -10994,12 +11001,12 @@ class ndarray(builtins.object)
  |      Traceback (most recent call last):
  |        File "&lt;stdin&gt;", line 1, in &lt;module&gt;
  |      ValueError: cannot set WRITEBACKIFCOPY flag to True
- |  
+ |
  |  sort(...)
  |      a.sort(axis=-1, kind=None, order=None)
- |      
+ |
  |      Sort an array in-place. Refer to `numpy.sort` for full documentation.
- |      
+ |
  |      Parameters
  |      ----------
  |      axis : int, optional
@@ -11010,17 +11017,17 @@ class ndarray(builtins.object)
  |          and 'mergesort' use timsort under the covers and, in general, the
  |          actual implementation will vary with datatype. The 'mergesort' option
  |          is retained for backwards compatibility.
- |      
+ |
  |          .. versionchanged:: 1.15.0
  |             The 'stable' option was added.
- |      
+ |
  |      order : str or list of str, optional
  |          When `a` is an array with fields defined, this argument specifies
  |          which fields to compare first, second, etc.  A single field can
  |          be specified as a string, and not all fields need be specified,
  |          but unspecified fields will still be used, in the order in which
  |          they come up in the dtype, to break ties.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.sort : Return a sorted copy of an array.
@@ -11028,11 +11035,11 @@ class ndarray(builtins.object)
  |      numpy.lexsort : Indirect stable sort on multiple keys.
  |      numpy.searchsorted : Find elements in sorted array.
  |      numpy.partition: Partial sort.
- |      
+ |
  |      Notes
  |      -----
  |      See `numpy.sort` for notes on the different sorting algorithms.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; a = np.array([[1,4], [3,1]])
@@ -11044,100 +11051,100 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; a
  |      array([[1, 3],
  |             [1, 4]])
- |      
+ |
  |      Use the `order` keyword to specify a field to use when sorting a
  |      structured array:
- |      
+ |
  |      &gt;&gt;&gt; a = np.array([('a', 2), ('c', 1)], dtype=[('x', 'S1'), ('y', int)])
  |      &gt;&gt;&gt; a.sort(order='y')
  |      &gt;&gt;&gt; a
  |      array([(b'c', 1), (b'a', 2)],
  |            dtype=[('x', 'S1'), ('y', '&lt;i8')])
- |  
+ |
  |  squeeze(...)
  |      a.squeeze(axis=None)
- |      
+ |
  |      Remove axes of length one from `a`.
- |      
+ |
  |      Refer to `numpy.squeeze` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.squeeze : equivalent function
- |  
+ |
  |  std(...)
  |      a.std(axis=None, dtype=None, out=None, ddof=0, keepdims=False, *, where=True)
- |      
+ |
  |      Returns the standard deviation of the array elements along given axis.
- |      
+ |
  |      Refer to `numpy.std` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.std : equivalent function
- |  
+ |
  |  sum(...)
  |      a.sum(axis=None, dtype=None, out=None, keepdims=False, initial=0, where=True)
- |      
+ |
  |      Return the sum of the array elements over the given axis.
- |      
+ |
  |      Refer to `numpy.sum` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.sum : equivalent function
- |  
+ |
  |  swapaxes(...)
  |      a.swapaxes(axis1, axis2)
- |      
+ |
  |      Return a view of the array with `axis1` and `axis2` interchanged.
- |      
+ |
  |      Refer to `numpy.swapaxes` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.swapaxes : equivalent function
- |  
+ |
  |  take(...)
  |      a.take(indices, axis=None, out=None, mode='raise')
- |      
+ |
  |      Return an array formed from the elements of `a` at the given indices.
- |      
+ |
  |      Refer to `numpy.take` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.take : equivalent function
- |  
+ |
  |  tobytes(...)
  |      a.tobytes(order='C')
- |      
+ |
  |      Construct Python bytes containing the raw data bytes in the array.
- |      
+ |
  |      Constructs Python bytes showing a copy of the raw contents of
  |      data memory. The bytes object is produced in C-order by default.
  |      This behavior is controlled by the ``order`` parameter.
- |      
+ |
  |      .. versionadded:: 1.9.0
- |      
+ |
  |      Parameters
  |      ----------
  |      order : {'C', 'F', 'A'}, optional
  |          Controls the memory layout of the bytes object. 'C' means C-order,
  |          'F' means F-order, 'A' (short for *Any*) means 'F' if `a` is
  |          Fortran contiguous, 'C' otherwise. Default is 'C'.
- |      
+ |
  |      Returns
  |      -------
  |      s : bytes
  |          Python bytes exhibiting a copy of `a`'s raw data.
- |      
+ |
  |      See also
  |      --------
  |      frombuffer
  |          Inverse of this operation, construct a 1-dimensional array from Python
  |          bytes.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.array([[0, 1], [2, 3]], dtype='&lt;u2')
@@ -11147,24 +11154,24 @@ class ndarray(builtins.object)
  |      True
  |      &gt;&gt;&gt; x.tobytes('F')
  |      b'\x00\x00\x02\x00\x01\x00\x03\x00'
- |  
+ |
  |  tofile(...)
  |      a.tofile(fid, sep="", format="%s")
- |      
+ |
  |      Write array to a file as text or binary (default).
- |      
+ |
  |      Data is always written in 'C' order, independent of the order of `a`.
  |      The data produced by this method can be recovered using the function
  |      fromfile().
- |      
+ |
  |      Parameters
  |      ----------
  |      fid : file or str or Path
  |          An open file object, or a string containing a filename.
- |      
+ |
  |          .. versionchanged:: 1.17.0
  |              `pathlib.Path` objects are now accepted.
- |      
+ |
  |      sep : str
  |          Separator between array items for text output.
  |          If "" (empty), a binary file is written, equivalent to
@@ -11173,7 +11180,7 @@ class ndarray(builtins.object)
  |          Format string for text file output.
  |          Each entry in the array is formatted to text by first converting
  |          it to the closest Python type, and then using "format" % item.
- |      
+ |
  |      Notes
  |      -----
  |      This is a convenience function for quick storage of array data.
@@ -11182,43 +11189,43 @@ class ndarray(builtins.object)
  |      machines with different endianness. Some of these problems can be overcome
  |      by outputting the data as text files, at the expense of speed and file
  |      size.
- |      
+ |
  |      When fid is a file object, array contents are directly written to the
  |      file, bypassing the file object's ``write`` method. As a result, tofile
  |      cannot be used with files objects supporting compression (e.g., GzipFile)
  |      or file-like objects that do not support ``fileno()`` (e.g., BytesIO).
- |  
+ |
  |  tolist(...)
  |      a.tolist()
- |      
+ |
  |      Return the array as an ``a.ndim``-levels deep nested list of Python scalars.
- |      
+ |
  |      Return a copy of the array data as a (nested) Python list.
  |      Data items are converted to the nearest compatible builtin Python type, via
  |      the `~numpy.ndarray.item` function.
- |      
+ |
  |      If ``a.ndim`` is 0, then since the depth of the nested list is 0, it will
  |      not be a list at all, but a simple Python scalar.
- |      
+ |
  |      Parameters
  |      ----------
  |      none
- |      
+ |
  |      Returns
  |      -------
  |      y : object, or list of object, or list of list of object, or ...
  |          The possibly nested list of array elements.
- |      
+ |
  |      Notes
  |      -----
  |      The array may be recreated via ``a = np.array(a.tolist())``, although this
  |      may sometimes lose precision.
- |      
+ |
  |      Examples
  |      --------
  |      For a 1D array, ``a.tolist()`` is almost the same as ``list(a)``,
  |      except that ``tolist`` changes numpy scalars to Python scalars:
- |      
+ |
  |      &gt;&gt;&gt; a = np.uint32([1, 2])
  |      &gt;&gt;&gt; a_list = list(a)
  |      &gt;&gt;&gt; a_list
@@ -11230,17 +11237,17 @@ class ndarray(builtins.object)
  |      [1, 2]
  |      &gt;&gt;&gt; type(a_tolist[0])
  |      &lt;class 'int'&gt;
- |      
+ |
  |      Additionally, for a 2D array, ``tolist`` applies recursively:
- |      
+ |
  |      &gt;&gt;&gt; a = np.array([[1, 2], [3, 4]])
  |      &gt;&gt;&gt; list(a)
  |      [array([1, 2]), array([3, 4])]
  |      &gt;&gt;&gt; a.tolist()
  |      [[1, 2], [3, 4]]
- |      
+ |
  |      The base case for this recursion is a 0D array:
- |      
+ |
  |      &gt;&gt;&gt; a = np.array(1)
  |      &gt;&gt;&gt; list(a)
  |      Traceback (most recent call last):
@@ -11248,57 +11255,57 @@ class ndarray(builtins.object)
  |      TypeError: iteration over a 0-d array
  |      &gt;&gt;&gt; a.tolist()
  |      1
- |  
+ |
  |  tostring(...)
  |      a.tostring(order='C')
- |      
+ |
  |      A compatibility alias for `tobytes`, with exactly the same behavior.
- |      
+ |
  |      Despite its name, it returns `bytes` not `str`\ s.
- |      
+ |
  |      .. deprecated:: 1.19.0
- |  
+ |
  |  trace(...)
  |      a.trace(offset=0, axis1=0, axis2=1, dtype=None, out=None)
- |      
+ |
  |      Return the sum along diagonals of the array.
- |      
+ |
  |      Refer to `numpy.trace` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.trace : equivalent function
- |  
+ |
  |  transpose(...)
  |      a.transpose(*axes)
- |      
+ |
  |      Returns a view of the array with axes transposed.
- |      
+ |
  |      Refer to `numpy.transpose` for full documentation.
- |      
+ |
  |      Parameters
  |      ----------
  |      axes : None, tuple of ints, or `n` ints
- |      
+ |
  |       * None or no argument: reverses the order of the axes.
- |      
+ |
  |       * tuple of ints: `i` in the `j`-th place in the tuple means that the
  |         array's `i`-th axis becomes the transposed array's `j`-th axis.
- |      
+ |
  |       * `n` ints: same as an n-tuple of the same ints (this form is
  |         intended simply as a "convenience" alternative to the tuple form).
- |      
+ |
  |      Returns
  |      -------
  |      p : ndarray
  |          View of the array with its axes suitably permuted.
- |      
+ |
  |      See Also
  |      --------
  |      transpose : Equivalent function.
  |      ndarray.T : Array property returning the array transposed.
  |      ndarray.reshape : Give a new shape to an array without changing its data.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; a = np.array([[1, 2], [3, 4]])
@@ -11314,34 +11321,34 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; a.transpose(1, 0)
  |      array([[1, 3],
  |             [2, 4]])
- |      
+ |
  |      &gt;&gt;&gt; a = np.array([1, 2, 3, 4])
  |      &gt;&gt;&gt; a
  |      array([1, 2, 3, 4])
  |      &gt;&gt;&gt; a.transpose()
  |      array([1, 2, 3, 4])
- |  
+ |
  |  var(...)
  |      a.var(axis=None, dtype=None, out=None, ddof=0, keepdims=False, *, where=True)
- |      
+ |
  |      Returns the variance of the array elements, along given axis.
- |      
+ |
  |      Refer to `numpy.var` for full documentation.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.var : equivalent function
- |  
+ |
  |  view(...)
  |      a.view([dtype][, type])
- |      
+ |
  |      New view of array with the same data.
- |      
+ |
  |      .. note::
  |          Passing None for ``dtype`` is different from omitting the parameter,
  |          since the former invokes ``dtype(None)`` which is an alias for
  |          ``dtype('float_')``.
- |      
+ |
  |      Parameters
  |      ----------
  |      dtype : data-type or ndarray sub-class, optional
@@ -11353,43 +11360,43 @@ class ndarray(builtins.object)
  |      type : Python type, optional
  |          Type of the returned view, e.g., ndarray or matrix.  Again, omission
  |          of the parameter results in type preservation.
- |      
+ |
  |      Notes
  |      -----
  |      ``a.view()`` is used two different ways:
- |      
+ |
  |      ``a.view(some_dtype)`` or ``a.view(dtype=some_dtype)`` constructs a view
  |      of the array's memory with a different data-type.  This can cause a
  |      reinterpretation of the bytes of memory.
- |      
+ |
  |      ``a.view(ndarray_subclass)`` or ``a.view(type=ndarray_subclass)`` just
  |      returns an instance of `ndarray_subclass` that looks at the same array
  |      (same shape, dtype, etc.)  This does not cause a reinterpretation of the
  |      memory.
- |      
+ |
  |      For ``a.view(some_dtype)``, if ``some_dtype`` has a different number of
  |      bytes per entry than the previous dtype (for example, converting a regular
  |      array to a structured array), then the last axis of ``a`` must be
  |      contiguous. This axis will be resized in the result.
- |      
+ |
  |      .. versionchanged:: 1.23.0
  |         Only the last axis needs to be contiguous. Previously, the entire array
  |         had to be C-contiguous.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.array([(1, 2)], dtype=[('a', np.int8), ('b', np.int8)])
- |      
+ |
  |      Viewing array data using a different type and dtype:
- |      
+ |
  |      &gt;&gt;&gt; y = x.view(dtype=np.int16, type=np.matrix)
  |      &gt;&gt;&gt; y
  |      matrix([[513]], dtype=int16)
  |      &gt;&gt;&gt; print(type(y))
  |      &lt;class 'numpy.matrix'&gt;
- |      
+ |
  |      Creating a view on a structured array so it can be used in calculations
- |      
+ |
  |      &gt;&gt;&gt; x = np.array([(1, 2),(3,4)], dtype=[('a', np.int8), ('b', np.int8)])
  |      &gt;&gt;&gt; xv = x.view(dtype=np.int8).reshape(-1,2)
  |      &gt;&gt;&gt; xv
@@ -11397,28 +11404,28 @@ class ndarray(builtins.object)
  |             [3, 4]], dtype=int8)
  |      &gt;&gt;&gt; xv.mean(0)
  |      array([2.,  3.])
- |      
+ |
  |      Making changes to the view changes the underlying array
- |      
+ |
  |      &gt;&gt;&gt; xv[0,1] = 20
  |      &gt;&gt;&gt; x
  |      array([(1, 20), (3,  4)], dtype=[('a', 'i1'), ('b', 'i1')])
- |      
+ |
  |      Using a view to convert an array to a recarray:
- |      
+ |
  |      &gt;&gt;&gt; z = x.view(np.recarray)
  |      &gt;&gt;&gt; z.a
  |      array([1, 3], dtype=int8)
- |      
+ |
  |      Views share data:
- |      
+ |
  |      &gt;&gt;&gt; x[0] = (9, 10)
  |      &gt;&gt;&gt; z[0]
  |      (9, 10)
- |      
+ |
  |      Views that change the dtype size (bytes per entry) should normally be
  |      avoided on arrays defined by slices, transposes, fortran-ordering, etc.:
- |      
+ |
  |      &gt;&gt;&gt; x = np.array([[1, 2, 3], [4, 5, 6]], dtype=np.int16)
  |      &gt;&gt;&gt; y = x[:, ::2]
  |      &gt;&gt;&gt; y
@@ -11432,10 +11439,10 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; z.view(dtype=[('width', np.int16), ('length', np.int16)])
  |      array([[(1, 3)],
  |             [(4, 6)]], dtype=[('width', '&lt;i2'), ('length', '&lt;i2')])
- |      
+ |
  |      However, views that change dtype are totally fine for arrays with a
  |      contiguous last axis, even if the rest of the axes are not C-contiguous:
- |      
+ |
  |      &gt;&gt;&gt; x = np.arange(2 * 3 * 4, dtype=np.int8).reshape(2, 3, 4)
  |      &gt;&gt;&gt; x.transpose(1, 0, 2).view(np.int16)
  |      array([[[ 256,  770],
@@ -11446,50 +11453,50 @@ class ndarray(builtins.object)
  |      &lt;BLANKLINE&gt;
  |             [[2312, 2826],
  |              [5396, 5910]]], dtype=int16)
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Class methods defined here:
- |  
- |  __class_getitem__(...) from builtins.type
+ |
+ |  __class_getitem__(...)
  |      a.__class_getitem__(item, /)
- |      
+ |
  |      Return a parametrized wrapper around the `~numpy.ndarray` type.
- |      
+ |
  |      .. versionadded:: 1.22
- |      
+ |
  |      Returns
  |      -------
  |      alias : types.GenericAlias
  |          A parametrized `~numpy.ndarray` type.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; from typing import Any
  |      &gt;&gt;&gt; import numpy as np
- |      
+ |
  |      &gt;&gt;&gt; np.ndarray[Any, np.dtype[Any]]
  |      numpy.ndarray[typing.Any, numpy.dtype[typing.Any]]
- |      
+ |
  |      See Also
  |      --------
  |      :pep:`585` : Type hinting generics in standard collections.
  |      numpy.typing.NDArray : An ndarray alias :term:`generic &lt;generic type&gt;`
  |                          w.r.t. its `dtype.type &lt;numpy.dtype.type&gt;`.
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Static methods defined here:
- |  
- |  __new__(*args, **kwargs) from builtins.type
+ |
+ |  __new__(*args, **kwargs)
  |      Create and return a new object.  See help(type) for accurate signature.
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Data descriptors defined here:
- |  
+ |
  |  T
  |      View of the transposed array.
- |      
+ |
  |      Same as ``self.transpose()``.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; a = np.array([[1, 2], [3, 4]])
@@ -11499,96 +11506,96 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; a.T
  |      array([[1, 3],
  |             [2, 4]])
- |      
+ |
  |      &gt;&gt;&gt; a = np.array([1, 2, 3, 4])
  |      &gt;&gt;&gt; a
  |      array([1, 2, 3, 4])
  |      &gt;&gt;&gt; a.T
  |      array([1, 2, 3, 4])
- |      
+ |
  |      See Also
  |      --------
  |      transpose
- |  
+ |
  |  __array_interface__
  |      Array protocol: Python side.
- |  
+ |
  |  __array_priority__
  |      Array priority.
- |  
+ |
  |  __array_struct__
  |      Array protocol: C-struct side.
- |  
+ |
  |  base
  |      Base object if memory is from some other object.
- |      
+ |
  |      Examples
  |      --------
  |      The base of an array that owns its memory is None:
- |      
+ |
  |      &gt;&gt;&gt; x = np.array([1,2,3,4])
  |      &gt;&gt;&gt; x.base is None
  |      True
- |      
+ |
  |      Slicing creates a view, whose memory is shared with x:
- |      
+ |
  |      &gt;&gt;&gt; y = x[2:]
  |      &gt;&gt;&gt; y.base is x
  |      True
- |  
+ |
  |  ctypes
  |      An object to simplify the interaction of the array with the ctypes
  |      module.
- |      
+ |
  |      This attribute creates an object that makes it easier to use arrays
  |      when calling shared libraries with the ctypes module. The returned
  |      object has, among others, data, shape, and strides attributes (see
  |      Notes below) which themselves return ctypes objects that can be used
  |      as arguments to a shared library.
- |      
+ |
  |      Parameters
  |      ----------
  |      None
- |      
+ |
  |      Returns
  |      -------
  |      c : Python object
  |          Possessing attributes data, shape, strides, etc.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.ctypeslib
- |      
+ |
  |      Notes
  |      -----
  |      Below are the public attributes of this object which were documented
  |      in "Guide to NumPy" (we have omitted undocumented public attributes,
  |      as well as documented private attributes):
- |      
+ |
  |      .. autoattribute:: numpy.core._internal._ctypes.data
  |          :noindex:
- |      
+ |
  |      .. autoattribute:: numpy.core._internal._ctypes.shape
  |          :noindex:
- |      
+ |
  |      .. autoattribute:: numpy.core._internal._ctypes.strides
  |          :noindex:
- |      
+ |
  |      .. automethod:: numpy.core._internal._ctypes.data_as
  |          :noindex:
- |      
+ |
  |      .. automethod:: numpy.core._internal._ctypes.shape_as
  |          :noindex:
- |      
+ |
  |      .. automethod:: numpy.core._internal._ctypes.strides_as
  |          :noindex:
- |      
+ |
  |      If the ctypes module is not available, then the ctypes attribute
  |      of array objects still returns something useful, but ctypes objects
  |      are not returned and errors may be raised instead. In particular,
  |      the object will still have the ``as_parameter`` attribute which will
  |      return an integer equal to the data attribute.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; import ctypes
@@ -11608,33 +11615,33 @@ class ndarray(builtins.object)
  |      &lt;numpy.core._internal.c_long_Array_2 object at 0x7ff2fc1fce60&gt; # may vary
  |      &gt;&gt;&gt; x.ctypes.strides
  |      &lt;numpy.core._internal.c_long_Array_2 object at 0x7ff2fc1ff320&gt; # may vary
- |  
+ |
  |  data
  |      Python buffer object pointing to the start of the array's data.
- |  
+ |
  |  dtype
  |      Data-type of the array's elements.
- |      
+ |
  |      .. warning::
- |      
+ |
  |          Setting ``arr.dtype`` is discouraged and may be deprecated in the
  |          future.  Setting will replace the ``dtype`` without modifying the
  |          memory (see also `ndarray.view` and `ndarray.astype`).
- |      
+ |
  |      Parameters
  |      ----------
  |      None
- |      
+ |
  |      Returns
  |      -------
  |      d : numpy dtype object
- |      
+ |
  |      See Also
  |      --------
  |      ndarray.astype : Cast the values contained in the array to a new data-type.
  |      ndarray.view : Create a view of the same data but a different data-type.
  |      numpy.dtype
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x
@@ -11644,10 +11651,10 @@ class ndarray(builtins.object)
  |      dtype('int32')
  |      &gt;&gt;&gt; type(x.dtype)
  |      &lt;type 'numpy.dtype'&gt;
- |  
+ |
  |  flags
  |      Information about the memory layout of the array.
- |      
+ |
  |      Attributes
  |      ----------
  |      C_CONTIGUOUS (C)
@@ -11683,48 +11690,48 @@ class ndarray(builtins.object)
  |          BEHAVED and C_CONTIGUOUS.
  |      FARRAY (FA)
  |          BEHAVED and F_CONTIGUOUS and not C_CONTIGUOUS.
- |      
+ |
  |      Notes
  |      -----
  |      The `flags` object can be accessed dictionary-like (as in ``a.flags['WRITEABLE']``),
  |      or by using lowercased attribute names (as in ``a.flags.writeable``). Short flag
  |      names are only supported in dictionary access.
- |      
+ |
  |      Only the WRITEBACKIFCOPY, WRITEABLE, and ALIGNED flags can be
  |      changed by the user, via direct assignment to the attribute or dictionary
  |      entry, or by calling `ndarray.setflags`.
- |      
+ |
  |      The array flags cannot be set arbitrarily:
- |      
+ |
  |      - WRITEBACKIFCOPY can only be set ``False``.
  |      - ALIGNED can only be set ``True`` if the data is truly aligned.
  |      - WRITEABLE can only be set ``True`` if the array owns its own memory
  |        or the ultimate owner of the memory exposes a writeable buffer
  |        interface or is a string.
- |      
+ |
  |      Arrays can be both C-style and Fortran-style contiguous simultaneously.
  |      This is clear for 1-dimensional arrays, but can also be true for higher
  |      dimensional arrays.
- |      
+ |
  |      Even for contiguous arrays a stride for a given dimension
  |      ``arr.strides[dim]`` may be *arbitrary* if ``arr.shape[dim] == 1``
  |      or the array has no elements.
  |      It does *not* generally hold that ``self.strides[-1] == self.itemsize``
  |      for C-style contiguous arrays or ``self.strides[0] == self.itemsize`` for
  |      Fortran-style contiguous arrays is true.
- |  
+ |
  |  flat
  |      A 1-D iterator over the array.
- |      
+ |
  |      This is a `numpy.flatiter` instance, which acts similarly to, but is not
  |      a subclass of, Python's built-in iterator object.
- |      
+ |
  |      See Also
  |      --------
  |      flatten : Return a copy of the array collapsed into one dimension.
- |      
+ |
  |      flatiter
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.arange(1, 7).reshape(2, 3)
@@ -11741,19 +11748,19 @@ class ndarray(builtins.object)
  |      5
  |      &gt;&gt;&gt; type(x.flat)
  |      &lt;class 'numpy.flatiter'&gt;
- |      
+ |
  |      An assignment example:
- |      
+ |
  |      &gt;&gt;&gt; x.flat = 3; x
  |      array([[3, 3, 3],
  |             [3, 3, 3]])
  |      &gt;&gt;&gt; x.flat[[1,4]] = 1; x
  |      array([[3, 1, 3],
  |             [3, 1, 3]])
- |  
+ |
  |  imag
  |      The imaginary part of the array.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.sqrt([1+0j, 0+1j])
@@ -11761,10 +11768,10 @@ class ndarray(builtins.object)
  |      array([ 0.        ,  0.70710678])
  |      &gt;&gt;&gt; x.imag.dtype
  |      dtype('float64')
- |  
+ |
  |  itemsize
  |      Length of one array element in bytes.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.array([1,2,3], dtype=np.float64)
@@ -11773,21 +11780,21 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; x = np.array([1,2,3], dtype=np.complex128)
  |      &gt;&gt;&gt; x.itemsize
  |      16
- |  
+ |
  |  nbytes
  |      Total bytes consumed by the elements of the array.
- |      
+ |
  |      Notes
  |      -----
  |      Does not include memory consumed by non-element attributes of the
  |      array object.
- |      
+ |
  |      See Also
  |      --------
  |      sys.getsizeof
  |          Memory consumed by the object itself without parents in case view.
  |          This does include memory consumed by non-element attributes.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.zeros((3,5,2), dtype=np.complex128)
@@ -11795,10 +11802,10 @@ class ndarray(builtins.object)
  |      480
  |      &gt;&gt;&gt; np.prod(x.shape) * x.itemsize
  |      480
- |  
+ |
  |  ndim
  |      Number of array dimensions.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.array([1, 2, 3])
@@ -11807,10 +11814,10 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; y = np.zeros((2, 3, 4))
  |      &gt;&gt;&gt; y.ndim
  |      3
- |  
+ |
  |  real
  |      The real part of the array.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.sqrt([1+0j, 0+1j])
@@ -11818,26 +11825,26 @@ class ndarray(builtins.object)
  |      array([ 1.        ,  0.70710678])
  |      &gt;&gt;&gt; x.real.dtype
  |      dtype('float64')
- |      
+ |
  |      See Also
  |      --------
  |      numpy.real : equivalent function
- |  
+ |
  |  shape
  |      Tuple of array dimensions.
- |      
+ |
  |      The shape property is usually used to get the current shape of an array,
  |      but may also be used to reshape the array in-place by assigning a tuple of
  |      array dimensions to it.  As with `numpy.reshape`, one of the new shape
  |      dimensions can be -1, in which case its value is inferred from the size of
  |      the array and the remaining dimensions. Reshaping an array in-place will
  |      fail if a copy is required.
- |      
+ |
  |      .. warning::
- |      
+ |
  |          Setting ``arr.shape`` is discouraged and may be deprecated in the
  |          future.  Using `ndarray.reshape` is the preferred approach.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.array([1, 2, 3, 4])
@@ -11860,19 +11867,19 @@ class ndarray(builtins.object)
  |        File "&lt;stdin&gt;", line 1, in &lt;module&gt;
  |      AttributeError: Incompatible shape for in-place modification. Use
  |      `.reshape()` to make a copy with the desired shape.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.shape : Equivalent getter function.
  |      numpy.reshape : Function similar to setting ``shape``.
  |      ndarray.reshape : Method similar to setting ``shape``.
- |  
+ |
  |  size
  |      Number of elements in the array.
- |      
+ |
  |      Equal to ``np.prod(a.shape)``, i.e., the product of the array's
  |      dimensions.
- |      
+ |
  |      Notes
  |      -----
  |      `a.size` returns a standard arbitrary precision Python integer. This
@@ -11880,7 +11887,7 @@ class ndarray(builtins.object)
  |      (like the suggested ``np.prod(a.shape)``, which returns an instance
  |      of ``np.int_``), and may be relevant if the value is used further in
  |      calculations that may overflow a fixed size integer type.
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; x = np.zeros((3, 5, 2), dtype=np.complex128)
@@ -11888,31 +11895,31 @@ class ndarray(builtins.object)
  |      30
  |      &gt;&gt;&gt; np.prod(x.shape)
  |      30
- |  
+ |
  |  strides
  |      Tuple of bytes to step in each dimension when traversing an array.
- |      
+ |
  |      The byte offset of element ``(i[0], i[1], ..., i[n])`` in an array `a`
  |      is::
- |      
+ |
  |          offset = sum(np.array(i) * a.strides)
- |      
+ |
  |      A more detailed explanation of strides can be found in the
  |      "ndarray.rst" file in the NumPy reference guide.
- |      
+ |
  |      .. warning::
- |      
+ |
  |          Setting ``arr.strides`` is discouraged and may be deprecated in the
  |          future.  `numpy.lib.stride_tricks.as_strided` should be preferred
  |          to create a new view of the same data in a safer way.
- |      
+ |
  |      Notes
  |      -----
  |      Imagine an array of 32-bit integers (each 4 bytes)::
- |      
+ |
  |        x = np.array([[0, 1, 2, 3, 4],
  |                      [5, 6, 7, 8, 9]], dtype=np.int32)
- |      
+ |
  |      This array is stored in memory as 40 bytes, one after the other
  |      (known as a contiguous block of memory).  The strides of an array tell
  |      us how many bytes we have to skip in memory to move to the next position
@@ -11920,11 +11927,11 @@ class ndarray(builtins.object)
  |      move to the next column, but 20 bytes (5 values) to get to the same
  |      position in the next row.  As such, the strides for the array `x` will be
  |      ``(20, 4)``.
- |      
+ |
  |      See Also
  |      --------
  |      numpy.lib.stride_tricks.as_strided
- |      
+ |
  |      Examples
  |      --------
  |      &gt;&gt;&gt; y = np.reshape(np.arange(2*3*4), (2,3,4))
@@ -11942,7 +11949,7 @@ class ndarray(builtins.object)
  |      &gt;&gt;&gt; offset=sum(y.strides * np.array((1,1,1)))
  |      &gt;&gt;&gt; offset/y.itemsize
  |      17
- |      
+ |
  |      &gt;&gt;&gt; x = np.reshape(np.arange(5*6*7*8), (5,6,7,8)).transpose(2,3,1,0)
  |      &gt;&gt;&gt; x.strides
  |      (32, 4, 224, 1344)
@@ -11952,10 +11959,10 @@ class ndarray(builtins.object)
  |      813
  |      &gt;&gt;&gt; offset / x.itemsize
  |      813
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Data and other attributes defined here:
- |  
+ |
  |  __hash__ = None
 
 </pre>
@@ -11979,7 +11986,7 @@ class ndarray(builtins.object)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
@@ -12007,7 +12014,7 @@ class ndarray(builtins.object)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
@@ -12048,7 +12055,7 @@ float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
@@ -12087,7 +12094,7 @@ float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -12128,7 +12135,7 @@ float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">d_int64</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
@@ -12167,7 +12174,7 @@ float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s1">'2.1'</span><span class="p">,</span><span class="mf">3.</span><span class="p">])</span>
@@ -12206,7 +12213,7 @@ float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mi">2000</span>
@@ -12253,7 +12260,7 @@ Number of bits required to represent c:  99
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># assign 9 to the variable b; </span>
@@ -12297,7 +12304,7 @@ Number of bits required to represent c:  99
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">**</span><span class="n">b</span>
@@ -12311,7 +12318,7 @@ Number of bits required to represent c:  99
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[56]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>0</pre>
 </div>
@@ -12334,7 +12341,7 @@ Number of bits required to represent c:  99
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="p">)</span>
@@ -12348,7 +12355,7 @@ Number of bits required to represent c:  99
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>numpy.int32</pre>
 </div>
@@ -12371,7 +12378,7 @@ Number of bits required to represent c:  99
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mi">2000</span>
@@ -12412,7 +12419,7 @@ Number of bits required to represent c:  99
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
@@ -12455,7 +12462,7 @@ Number of bits required to represent c:  99
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -12503,7 +12510,7 @@ $\sum_i a^{b_i}$, you are in trouble:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sum_int</span><span class="o">=</span><span class="mi">0</span>
@@ -12550,7 +12557,7 @@ Total:  1246824400
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -12611,7 +12618,7 @@ Total:  512000000000000016000000002000
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -12666,7 +12673,7 @@ Total: 5.120000000000000068032281968640e+29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sum_int</span> <span class="o">==</span> <span class="n">sum_float</span><span class="p">)</span>
@@ -12704,7 +12711,7 @@ Total: 5.120000000000000068032281968640e+29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">sum_int</span><span class="p">)</span> <span class="o">==</span> <span class="n">sum_float</span><span class="p">)</span>
@@ -12742,7 +12749,7 @@ Total: 5.120000000000000068032281968640e+29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">t1</span><span class="o">=</span><span class="mi">20</span>
@@ -12783,7 +12790,7 @@ Total: 5.120000000000000068032281968640e+29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">t1</span> <span class="ow">is</span> <span class="n">t2</span>  <span class="c1"># test if the two variables are the same</span>
@@ -12797,10 +12804,274 @@ Total: 5.120000000000000068032281968640e+29
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>False</pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=803cd6b8-c4fa-4383-9a06-fe2835655ac6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="A-case-study">A case study<a class="anchor-link" href="#A-case-study">¶</a></h3><p>Calculation of specific heat (<em>Cp</em>) as a function of the temperature (<em>T</em>) according to the power series expression</p>
+$$Cp=C_1 T + C_2 T^2 + C_3 T^3 + C_4 T^6$$
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=413b1d82-28da-499b-b635-7552cfe4fb60">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># exponents of the power series stored as integers of a numpy array </span>
+<span class="n">power</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># coefficients of the series stored as floating point elements of a numpy array</span>
+<span class="n">coef</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="mf">1.01881212e+00</span><span class="p">,</span>  <span class="mf">1.28857350e-03</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.67679726e-06</span><span class="p">,</span>  <span class="mf">3.20975313e-15</span><span class="p">])</span>
+
+<span class="c1"># function definition:</span>
+<span class="c1">#          it takes the temperature as argument and</span>
+<span class="c1">#          returns the specific heat at that temperature</span>
+<span class="c1">#          as computed from the power series</span>
+<span class="k">def</span> <span class="nf">cp</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
+    <span class="n">cp_value</span><span class="o">=</span><span class="mf">0.</span>
+    <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">power</span><span class="p">)):</span>
+        <span class="n">cp_value</span><span class="o">=</span><span class="n">cp_value</span><span class="o">+</span><span class="n">coef</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="o">*</span><span class="n">temp</span><span class="o">**</span><span class="n">power</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">cp_value</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6a72e5f3-6d03-4d33-97da-b7bbe9e5ddc8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Compute the specific heat at 10. and 300. K:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=63f72607-f394-473b-a2bd-4df35f1af612">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">cp_10</span><span class="o">=</span><span class="n">cp</span><span class="p">(</span><span class="mf">10.</span><span class="p">)</span>
+<span class="n">cp_300</span><span class="o">=</span><span class="n">cp</span><span class="p">(</span><span class="mf">300.</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Cp at 10K: </span><span class="si">%8.2f</span><span class="s2">;  Cp at 300K: </span><span class="si">%8.2f</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">cp_10</span><span class="p">,</span> <span class="n">cp_300</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Cp at 10K:    10.31;  Cp at 300K:   324.68
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6d356bfa-8f63-406e-af89-293b0cfc4a84">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now, suppose that instead of specifying the temperature as a floating point number, you enter it as an integer (quite common case):</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2d521a46-f30e-4a34-9755-01ae3cb1d991">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">cp_10</span><span class="o">=</span><span class="n">cp</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">cp_300</span><span class="o">=</span><span class="n">cp</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Cp at 10K: </span><span class="si">%8.2f</span><span class="s2">;  Cp at 300K: </span><span class="si">%8.2f</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">cp_10</span><span class="p">,</span> <span class="n">cp_300</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Cp at 10K:    10.31;  Cp at 300K:   322.34
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a78344b9-84d9-47c0-9b9f-c8f8a8681a39">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>No problem at 10K (same result as before) but something strange happened at 300K!</p>
+<p>We had an overflow problem for the term $C_4T^6$ at 300K: indeed, if $T=300$ is an interger, $300^6$ is a quite large integer that requires 50 bits to be represented:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0cb23b2e-ff30-4c72-8c20-94e137df58c1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">pow</span><span class="o">=</span><span class="mi">300</span><span class="o">**</span><span class="mi">6</span>
+<span class="n">lb</span><span class="o">=</span><span class="nb">pow</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"pow: </span><span class="si">%15i</span><span class="s2">;  bit length: </span><span class="si">%3i</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="nb">pow</span><span class="p">,</span> <span class="n">lb</span><span class="p">))</span>  
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>pow: 729000000000000;  bit length:  50
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c9a125a9-1442-4f48-b341-99ce1ebb9a9f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>but, since the power 6 was from an integer numpy array, the bit length of $300^6$ can be upmost 32:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c7d6337b-0363-4904-84f7-0608ae553876">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">pow</span><span class="o">=</span><span class="mi">300</span><span class="o">**</span><span class="n">power</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Type of pow: </span><span class="si">%s</span><span class="s2">; value: </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">pow</span><span class="p">),</span> <span class="nb">pow</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Type of pow: &lt;class 'numpy.int32'&gt;; value: -1979019264
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=280a0a02-a307-45c1-ac32-c776d560e2ae">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The resulting number for $T^6$ clearly indicates an overflow. A way to correct a situation like this is:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=064c053e-206e-4275-b9d5-505f0d179fda">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">cp</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
+    <span class="n">temp</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>  <span class="c1"># &lt;--- convert an integer in float </span>
+    <span class="n">cp_value</span><span class="o">=</span><span class="mf">0.</span>
+    <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">power</span><span class="p">)):</span>
+        <span class="n">cp_value</span><span class="o">=</span><span class="n">cp_value</span><span class="o">+</span><span class="n">coef</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="o">*</span><span class="n">temp</span><span class="o">**</span><span class="n">power</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">cp_value</span> 
+
+<span class="n">cp_300a</span><span class="o">=</span><span class="n">cp</span><span class="p">(</span><span class="mf">300.</span><span class="p">)</span>
+<span class="n">cp_300b</span><span class="o">=</span><span class="n">cp</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Values at 300K: </span><span class="si">%6.2f</span><span class="s2">,  </span><span class="si">%6.2f</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">cp_300a</span><span class="p">,</span> <span class="n">cp_300b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Values at 300K: 324.68,  324.68
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5b43c893-cee9-49e5-a684-fbfb8a19811b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>------ End of the case study -------</p>
 </div>
 </div>
 </div>
@@ -12820,7 +13091,7 @@ Total: 5.120000000000000068032281968640e+29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -12862,7 +13133,7 @@ Total: 5.120000000000000068032281968640e+29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
@@ -12901,7 +13172,7 @@ Total: 5.120000000000000068032281968640e+29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)))</span>
@@ -12939,7 +13210,7 @@ Total: 5.120000000000000068032281968640e+29
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -12982,7 +13253,7 @@ b:  [ 0 10 20 30 40]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -13025,7 +13296,7 @@ b:  [10 11 12 13 14]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
@@ -13040,7 +13311,7 @@ b:  [10 11 12 13 14]
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>[1, 2, 3, 4, 1, 2, 3, 4]</pre>
 </div>
@@ -13064,7 +13335,7 @@ b:  [10 11 12 13 14]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
@@ -13105,7 +13376,7 @@ b:  [10 11 12 13 14]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -13140,7 +13411,7 @@ Dimension:  1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
@@ -13190,7 +13461,7 @@ Dimension:  2
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>    <span class="c1"># print line 0</span>
@@ -13232,7 +13503,7 @@ Dimension:  2
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [80]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -13272,7 +13543,7 @@ Shape:  (4, 2)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [79]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
@@ -13286,7 +13557,7 @@ Shape:  (4, 2)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[79]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[81]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>array([[1., 3., 5., 7.],
        [2., 4., 6., 8.]])</pre>
@@ -13310,7 +13581,7 @@ Shape:  (4, 2)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [82]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span>
@@ -13324,7 +13595,7 @@ Shape:  (4, 2)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[82]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>array([[1., 2.],
        [3., 4.],
@@ -13353,7 +13624,7 @@ Shape:  (4, 2)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [83]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
@@ -13367,7 +13638,7 @@ Shape:  (4, 2)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [82]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [84]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Array:     "</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
@@ -13413,7 +13684,7 @@ Dimension:  1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [83]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>   <span class="c1"># a Python list (it is not a numpy array)</span>
@@ -13441,7 +13712,7 @@ Dimension:  1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [84]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>  <span class="c1"># n:m[:s] start, end, [step]</span>
@@ -13485,7 +13756,7 @@ Dimension:  1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [85]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [87]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">]])</span>
@@ -13528,7 +13799,7 @@ Dimension:  1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [88]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,:])</span>
@@ -13566,7 +13837,7 @@ Dimension:  1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [87]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [89]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[:,</span><span class="mi">2</span><span class="p">])</span>
@@ -13604,7 +13875,7 @@ Dimension:  1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [88]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [90]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -13647,7 +13918,7 @@ Sorted array:    [1 2 3 4 5 6 7 8 9]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [89]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [91]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -13702,7 +13973,7 @@ Original array is not modified:  [1 3 5 2 8 7 6 9 4]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [90]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [92]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
@@ -13743,7 +14014,7 @@ Original array is not modified:  [1 3 5 2 8 7 6 9 4]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [91]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [93]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -13783,7 +14054,7 @@ Original array is not modified:  [1 3 5 2 8 7 6 9 4]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [92]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [94]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Sorted array: "</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">pos</span><span class="p">])</span>
@@ -13821,7 +14092,7 @@ Original array is not modified:  [1 3 5 2 8 7 6 9 4]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [93]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [95]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span> 
@@ -13850,7 +14121,7 @@ Original array is not modified:  [1 3 5 2 8 7 6 9 4]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [94]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [96]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"First row: "</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,:])</span>  <span class="c1"># print the first row (index 0)</span>
@@ -13901,7 +14172,7 @@ Sorted array:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [95]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [97]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -13949,7 +14220,7 @@ Maximum of a:  9    - position:  7
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [96]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [98]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Import the "plotting library"</span>
@@ -14027,7 +14298,7 @@ Value of Y at the minimum: 30.31
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [97]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [99]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14066,7 +14337,7 @@ Value of Y at the minimum: 30.31
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [98]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [100]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">a</span>
@@ -14110,7 +14381,7 @@ Modified a:  [0 1 4 3 2 5 6 7 8 9]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [99]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [101]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"array b: "</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -14148,7 +14419,7 @@ Modified a:  [0 1 4 3 2 5 6 7 8 9]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [100]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [102]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
@@ -14186,7 +14457,7 @@ Modified a:  [0 1 4 3 2 5 6 7 8 9]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [101]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [103]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14234,7 +14505,7 @@ Backup array b:    [0 1 2 3 4 5 6 7 8 9]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [102]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [104]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -14277,7 +14548,7 @@ Backup array b:    [0 1 2 3 4 5 6 7 8 9]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [103]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [105]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
@@ -14299,9 +14570,9 @@ Backup array b:    [0 1 2 3 4 5 6 7 8 9]
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>0x25610927440
-0x25610927440
-0x25610927700
+<pre>0x1bb34127240
+0x1bb34127240
+0x1bb34127340
 </pre>
 </div>
 </div>
@@ -14324,7 +14595,7 @@ Backup array b:    [0 1 2 3 4 5 6 7 8 9]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [104]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [106]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -14346,14 +14617,14 @@ Backup array b:    [0 1 2 3 4 5 6 7 8 9]
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Address of a:  0x25610a2a540 
+<pre>Address of a:  0x1bb34195840 
 
 Addresses of the elements of a:
-0x7ff83b299308
-0x7ff83b299328
-0x7ff83b299348
-0x7ff83b299368
-0x7ff83b299388
+0x7ffc98c12998
+0x7ffc98c129b8
+0x7ffc98c129d8
+0x7ffc98c129f8
+0x7ffc98c12a18
 </pre>
 </div>
 </div>
@@ -14376,7 +14647,7 @@ Addresses of the elements of a:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [105]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [107]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># the value 1 is assigned to o1, and then o1 is assigned to o2</span>
@@ -14398,8 +14669,8 @@ Addresses of the elements of a:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>0x7ff83b299328
-0x7ff83b299328
+<pre>0x7ffc98c129b8
+0x7ffc98c129b8
 </pre>
 </div>
 </div>
@@ -14410,7 +14681,7 @@ Addresses of the elements of a:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [106]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [108]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Now o1 is reassigned; </span>
@@ -14435,8 +14706,8 @@ Addresses of the elements of a:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>2 1
-0x7ff83b299348
-0x7ff83b299328
+0x7ffc98c129d8
+0x7ffc98c129b8
 </pre>
 </div>
 </div>
@@ -14458,7 +14729,7 @@ Addresses of the elements of a:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [107]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [109]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14505,7 +14776,7 @@ b:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [108]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [110]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
@@ -14551,7 +14822,7 @@ c:  [1 2 3 1 2 3 1 2 3]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [109]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [111]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span>
@@ -14590,7 +14861,7 @@ c:  [1 2 3 1 2 3 1 2 3]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [110]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [112]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">and</span> <span class="n">b</span><span class="p">)</span>
@@ -14619,7 +14890,7 @@ False
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [111]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [113]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">or</span> <span class="n">b</span><span class="p">)</span>
@@ -14659,7 +14930,7 @@ True
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [112]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [114]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
@@ -14700,7 +14971,7 @@ True
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [113]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [115]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
@@ -14719,7 +14990,7 @@ True
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
 <span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-intense-fg ansi-bold">In[113], line 1</span>
+Cell <span class="ansi-green-intense-fg ansi-bold">In[115], line 1</span>
 <span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(a <span style="color: rgb(98,98,98)">&amp;</span> b)
 
 <span class="ansi-red-intense-fg ansi-bold">TypeError</span>: unsupported operand type(s) for &amp;: 'list' and 'list'</pre>
@@ -14744,7 +15015,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[113], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [114]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [116]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">tf</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
@@ -14759,7 +15030,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[113], line 1</span>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[114]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[116]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>array([ True,  True, False,  True,  True, False])</pre>
 </div>
@@ -14782,7 +15053,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[113], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [115]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [117]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
@@ -14824,7 +15095,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[113], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [116]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [118]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a_and_b</span> <span class="o">=</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span> 
@@ -14843,7 +15114,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[113], line 1</span>
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
 <span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
-Cell <span class="ansi-green-intense-fg ansi-bold">In[116], line 1</span>
+Cell <span class="ansi-green-intense-fg ansi-bold">In[118], line 1</span>
 <span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span> a_and_b <span style="color: rgb(98,98,98)">=</span> a <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> b
 
 <span class="ansi-red-intense-fg ansi-bold">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()</pre>
@@ -14867,7 +15138,7 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[116], line 1</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [117]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [119]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -14911,7 +15182,7 @@ Selected elements:  [10 12 14 16 18]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [118]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [120]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mi">3</span>
@@ -14959,7 +15230,7 @@ Selected elements:  [10 12 14 16 18]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [119]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [121]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -15001,7 +15272,7 @@ Selected elements:  [10 12 14 16 18]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [120]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [122]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">a</span><span class="o">&gt;=</span><span class="n">thr</span><span class="p">])</span>
@@ -15039,7 +15310,7 @@ Selected elements:  [10 12 14 16 18]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [121]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [123]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">thr</span><span class="p">)</span>
@@ -15053,7 +15324,7 @@ Selected elements:  [10 12 14 16 18]
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[121]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[123]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>(array([4, 5, 6, 7, 8, 9], dtype=int64),)</pre>
 </div>
@@ -15065,7 +15336,7 @@ Selected elements:  [10 12 14 16 18]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [122]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [124]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="n">thr</span><span class="p">)</span>
@@ -15104,7 +15375,7 @@ Selected elements:  [10 12 14 16 18]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [123]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [125]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
@@ -15150,7 +15421,7 @@ Union:         [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [124]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [126]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">dct</span><span class="o">=</span><span class="p">{</span><span class="s1">'var1'</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">'var2'</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">'var3'</span><span class="p">:</span> <span class="s1">'my_var'</span><span class="p">}</span>
@@ -15199,7 +15470,7 @@ Whole dictionary:  {'var1': 1.0, 'var2': 1.5, 'var3': 'my_var'}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [125]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [127]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">set_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
@@ -15228,7 +15499,7 @@ Whole dictionary:  {'var1': 1.0, 'var2': 1.5, 'var3': 'my_var'}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [126]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [128]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
@@ -15249,171 +15520,171 @@ Whole dictionary:  {'var1': 1.0, 'var2': 1.5, 'var3': 'my_var'}
 class set(object)
  |  set() -&gt; new empty set object
  |  set(iterable) -&gt; new set object
- |  
+ |
  |  Build an unordered collection of unique elements.
- |  
+ |
  |  Methods defined here:
- |  
+ |
  |  __and__(self, value, /)
  |      Return self&amp;value.
- |  
+ |
  |  __contains__(...)
  |      x.__contains__(y) &lt;==&gt; y in x.
- |  
+ |
  |  __eq__(self, value, /)
  |      Return self==value.
- |  
+ |
  |  __ge__(self, value, /)
  |      Return self&gt;=value.
- |  
+ |
  |  __getattribute__(self, name, /)
  |      Return getattr(self, name).
- |  
+ |
  |  __gt__(self, value, /)
  |      Return self&gt;value.
- |  
+ |
  |  __iand__(self, value, /)
  |      Return self&amp;=value.
- |  
+ |
  |  __init__(self, /, *args, **kwargs)
  |      Initialize self.  See help(type(self)) for accurate signature.
- |  
+ |
  |  __ior__(self, value, /)
  |      Return self|=value.
- |  
+ |
  |  __isub__(self, value, /)
  |      Return self-=value.
- |  
+ |
  |  __iter__(self, /)
  |      Implement iter(self).
- |  
+ |
  |  __ixor__(self, value, /)
  |      Return self^=value.
- |  
+ |
  |  __le__(self, value, /)
  |      Return self&lt;=value.
- |  
+ |
  |  __len__(self, /)
  |      Return len(self).
- |  
+ |
  |  __lt__(self, value, /)
  |      Return self&lt;value.
- |  
+ |
  |  __ne__(self, value, /)
  |      Return self!=value.
- |  
+ |
  |  __or__(self, value, /)
  |      Return self|value.
- |  
+ |
  |  __rand__(self, value, /)
  |      Return value&amp;self.
- |  
+ |
  |  __reduce__(...)
  |      Return state information for pickling.
- |  
+ |
  |  __repr__(self, /)
  |      Return repr(self).
- |  
+ |
  |  __ror__(self, value, /)
  |      Return value|self.
- |  
+ |
  |  __rsub__(self, value, /)
  |      Return value-self.
- |  
+ |
  |  __rxor__(self, value, /)
  |      Return value^self.
- |  
+ |
  |  __sizeof__(...)
  |      S.__sizeof__() -&gt; size of S in memory, in bytes
- |  
+ |
  |  __sub__(self, value, /)
  |      Return self-value.
- |  
+ |
  |  __xor__(self, value, /)
  |      Return self^value.
- |  
+ |
  |  add(...)
  |      Add an element to a set.
- |      
+ |
  |      This has no effect if the element is already present.
- |  
+ |
  |  clear(...)
  |      Remove all elements from this set.
- |  
+ |
  |  copy(...)
  |      Return a shallow copy of a set.
- |  
+ |
  |  difference(...)
  |      Return the difference of two or more sets as a new set.
- |      
+ |
  |      (i.e. all elements that are in this set but not the others.)
- |  
+ |
  |  difference_update(...)
  |      Remove all elements of another set from this set.
- |  
+ |
  |  discard(...)
  |      Remove an element from a set if it is a member.
- |      
+ |
  |      Unlike set.remove(), the discard() method does not raise
  |      an exception when an element is missing from the set.
- |  
+ |
  |  intersection(...)
  |      Return the intersection of two sets as a new set.
- |      
+ |
  |      (i.e. all elements that are in both sets.)
- |  
+ |
  |  intersection_update(...)
  |      Update a set with the intersection of itself and another.
- |  
+ |
  |  isdisjoint(...)
  |      Return True if two sets have a null intersection.
- |  
- |  issubset(...)
- |      Report whether another set contains this set.
- |  
- |  issuperset(...)
- |      Report whether this set contains another set.
- |  
+ |
+ |  issubset(self, other, /)
+ |      Test whether every element in the set is in other.
+ |
+ |  issuperset(self, other, /)
+ |      Test whether every element in other is in the set.
+ |
  |  pop(...)
  |      Remove and return an arbitrary set element.
  |      Raises KeyError if the set is empty.
- |  
+ |
  |  remove(...)
  |      Remove an element from a set; it must be a member.
- |      
+ |
  |      If the element is not a member, raise a KeyError.
- |  
+ |
  |  symmetric_difference(...)
  |      Return the symmetric difference of two sets as a new set.
- |      
+ |
  |      (i.e. all elements that are in exactly one of the sets.)
- |  
+ |
  |  symmetric_difference_update(...)
  |      Update a set with the symmetric difference of itself and another.
- |  
+ |
  |  union(...)
  |      Return the union of sets as a new set.
- |      
+ |
  |      (i.e. all elements that are in either set.)
- |  
+ |
  |  update(...)
  |      Update a set with the union of itself and others.
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Class methods defined here:
- |  
- |  __class_getitem__(...) from builtins.type
+ |
+ |  __class_getitem__(...)
  |      See PEP 585
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Static methods defined here:
- |  
- |  __new__(*args, **kwargs) from builtins.type
+ |
+ |  __new__(*args, **kwargs)
  |      Create and return a new object.  See help(type) for accurate signature.
- |  
+ |
  |  ----------------------------------------------------------------------
  |  Data and other attributes defined here:
- |  
+ |
  |  __hash__ = None
 
 </pre>
@@ -15426,7 +15697,7 @@ class set(object)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [127]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [129]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">s2</span><span class="o">=</span><span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
